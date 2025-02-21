@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://7wb18i6hgf"]
+
+[ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
+[ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
+[ext_resource type="Script" path="res://Scenes/Player/label.gd" id="3_76tq7"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ha72l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_peaub"]
+radius = 0.5
+height = 2.0
+
+[node name="TestCat" type="Node2D" groups=["friends"]]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(41, 42)
+script = ExtResource("1_ocf2j")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(82, 82)
+mesh = SubResource("CapsuleMesh_ha72l")
+
+[node name="Label" type="Label" parent="CharacterBody2D"]
+offset_left = -25.0
+offset_top = -96.0
+offset_right = 26.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = ":3"
+
+[node name="Aimer" type="Node2D" parent="CharacterBody2D"]
+position = Vector2(0, -74)
+script = ExtResource("2_fjywb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(82, 82)
+shape = SubResource("CapsuleShape2D_peaub")
+
+[node name="TempCam" type="Camera2D" parent="."]
+position = Vector2(5, 2)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -553.0
+offset_top = 251.0
+offset_right = -292.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Test
+"
+script = ExtResource("3_76tq7")

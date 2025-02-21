@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cniq2hvup4upo"]
+
+[ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="1_qtrwu"]
+[ext_resource type="PackedScene" uid="uid://dlbvjdus7do2r" path="res://Scenes/Den/den.tscn" id="2_7000r"]
+[ext_resource type="PackedScene" uid="uid://dpqwuwlce0ikj" path="res://Scenes/Enemy/enemy.tscn" id="3_nk5ov"]
+
+[node name="Test" type="Node2D"]
+
+[node name="TestCat" parent="." instance=ExtResource("1_qtrwu")]
+
+[node name="Den" parent="." instance=ExtResource("2_7000r")]
+unique_name_in_owner = true
+
+[node name="Enemy" parent="." instance=ExtResource("3_nk5ov")]
+position = Vector2(456, -208)
