@@ -8,6 +8,7 @@
 radius = 0.501288
 
 [node name="TestProjectile" type="RigidBody2D"]
+collision_layer = 0
 script = ExtResource("1_mitkg")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
