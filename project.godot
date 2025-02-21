@@ -24,6 +24,8 @@ version_control/autoload_on_startup=true
 
 Friends=""
 Enemies=""
+Player_Projectiles="Projectiles the player fires"
+den="Da Den"
 
 [input]
 

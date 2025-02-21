@@ -7,8 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_6q7iq"]
 radius = 0.501288
 
-[node name="TestProjectile" type="RigidBody2D"]
-collision_layer = 0
+[node name="TestProjectile" type="RigidBody2D" groups=["Player_Projectiles"]]
+collision_layer = 2
 script = ExtResource("1_mitkg")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]

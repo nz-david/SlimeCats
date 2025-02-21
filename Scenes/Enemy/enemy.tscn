@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auyfp"]
 size = Vector2(18.5, 19.5)
 
-[node name="Enemy" type="Area2D" groups=["Enemies"]]
+[node name="Enemy" type="CharacterBody2D" groups=["den"]]
 script = ExtResource("1_jq74k")
 
 [node name="Enemy_Hit_Box" type="CollisionShape2D" parent="." groups=["Enemies"]]
@@ -17,5 +17,3 @@ shape = SubResource("RectangleShape2D_auyfp")
 position = Vector2(0, 1.90735e-06)
 scale = Vector2(0.15625, 0.164063)
 texture = ExtResource("2_41abq")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]

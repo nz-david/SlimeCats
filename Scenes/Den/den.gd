@@ -1,4 +1,4 @@
-extends Node2D
+extends StaticBody2D
 
 var base_health = 10
 var health
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 # I tried just queue_freeing the den but that makes everything crash. Trust me
 	if health < 1:
 		sprite.visible = false
-		collision.disabled = true
+		#collision.disabled = true
 		$ProgressBar.visible = false
 
 # Den takes 3.5 damage every time the enemy's hit-box collides with it
@@ -29,4 +29,5 @@ func _on_den_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemies"):
 		health -= 3.5
 		
-		
+func damage():
+	health -=3.5

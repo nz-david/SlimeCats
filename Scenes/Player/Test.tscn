@@ -11,5 +11,16 @@
 [node name="Den" parent="." instance=ExtResource("2_7000r")]
 unique_name_in_owner = true
 
-[node name="Enemy" parent="." instance=ExtResource("3_nk5ov")]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_nk5ov")]
 position = Vector2(456, -208)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_nk5ov")]
+position = Vector2(448, 30)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("3_nk5ov")]
+position = Vector2(-416, -306)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("3_nk5ov")]
+position = Vector2(-421, 282)

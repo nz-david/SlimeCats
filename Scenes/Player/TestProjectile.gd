@@ -12,10 +12,12 @@ func _process(delta: float) -> void:
 	var collision := move_and_collide(velocity)
 	
 	if collision:
+		print("Has Entered :3")
 		var other =collision.get_collider()
-		if(other.is_in_group("player")):
-			other.damage(1)
-			queue_free()
+		print(other.get_class())
+		if(other.is_in_group("Enemies")):
+			other.damage()
+		queue_free()
 	
 	
 	velocity = transform.y * speed
