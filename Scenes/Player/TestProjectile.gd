@@ -17,7 +17,8 @@ func _process(delta: float) -> void:
 		print(other.get_class())
 		if(other.is_in_group("Enemies")):
 			other.damage()
-		queue_free()
-	
+			queue_free()
+		elif(other.is_in_group("den")):
+			queue_free()
 	
 	velocity = transform.y * speed

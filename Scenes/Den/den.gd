@@ -4,8 +4,7 @@ var base_health = 10
 var health
 
 @onready var sprite = $Sprite2D
-@onready var collision = $Den_Hit_Box/CollisionShape2D
-@onready var Hit_box = $Den_Hit_Box
+@onready var Hit_box = $CollisionShape2D
 
 # Health value and Display
 func _ready() -> void:
@@ -21,8 +20,9 @@ func _process(delta: float) -> void:
 # I tried just queue_freeing the den but that makes everything crash. Trust me
 	if health < 1:
 		sprite.visible = false
-		#collision.disabled = true
+		Hit_box.disabled = true
 		$ProgressBar.visible = false
+
 
 # Den takes 3.5 damage every time the enemy's hit-box collides with it
 func _on_den_hit_box_area_entered(area: Area2D) -> void:

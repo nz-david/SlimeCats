@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auyfp"]
 size = Vector2(18.5, 19.5)
 
-[node name="Enemy" type="CharacterBody2D" groups=["den"]]
+[node name="Enemy" type="CharacterBody2D" groups=["Enemies"]]
 script = ExtResource("1_jq74k")
 
 [node name="Enemy_Hit_Box" type="CollisionShape2D" parent="." groups=["Enemies"]]

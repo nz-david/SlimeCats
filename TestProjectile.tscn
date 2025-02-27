@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7skf3vv63mus"]
+
+[ext_resource type="Script" path="res://Scenes/Player/TestProjectile.gd" id="1_mitkg"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_80hhw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6q7iq"]
+radius = 0.501288
+
+[node name="TestProjectile" type="RigidBody2D" groups=["Player_Projectiles"]]
+collision_layer = 2
+script = ExtResource("1_mitkg")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(-2.86102e-06, -2.86102e-06)
+scale = Vector2(27.5, 27.5)
+mesh = SubResource("SphereMesh_80hhw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.23681e-06, 4.17228e-07)
+scale = Vector2(27.5, 27.5)
+shape = SubResource("CircleShape2D_6q7iq")
