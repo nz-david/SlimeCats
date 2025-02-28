@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp4byxfqiwdnw"]
+
+[ext_resource type="Script" path="res://gameover.gd" id="1_j3t8f"]
+[ext_resource type="Texture2D" uid="uid://ghfo472b36gu" path="res://Assets/Images/Sad_Slime_Cats_Base.png" id="1_vev4d"]
+
+[node name="gameover" type="CanvasLayer"]
+scale = Vector2(0.78, 0.78)
+transform = Transform2D(0.78, 0, 0, 0.78, 0, 0)
+script = ExtResource("1_j3t8f")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 1.28
+anchor_bottom = 1.28
+offset_left = 602.564
+offset_top = 282.051
+offset_right = 8627.0
+offset_bottom = 1836.61
+scale = Vector2(0.025, 0.025)
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 1750
+text = "Game Over"
+
+[node name="Quit" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 1.279
+anchor_bottom = 1.273
+offset_left = 694.0
+offset_top = 413.0
+offset_right = 1553.59
+offset_bottom = 865.096
+scale = Vector2(0.035, 0.035)
+theme_override_font_sizes/font_size = 710
+text = "Quit"
+
+[node name="Retry" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 1.277
+anchor_bottom = 1.276
+offset_left = 694.0
+offset_top = 353.0
+offset_right = -428.104
+offset_bottom = -304.848
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.235, 0.235)
+theme_override_font_sizes/font_size = 90
+text = "Retry"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(452.564, 358.974)
+rotation = -0.589921
+scale = Vector2(7.435, 7.4212)
+texture = ExtResource("1_vev4d")
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

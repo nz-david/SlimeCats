@@ -9,7 +9,6 @@ var health
 # Health value and Display
 func _ready() -> void:
 	health = base_health
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,7 +21,7 @@ func _process(delta: float) -> void:
 		sprite.visible = false
 		Hit_box.disabled = true
 		$ProgressBar.visible = false
-
+		get_tree().change_scene_to_file("res://gameover.tscn")
 
 # Den takes 3.5 damage every time the enemy's hit-box collides with it
 func _on_den_hit_box_area_entered(area: Area2D) -> void:
