@@ -7,6 +7,7 @@
 [node name="Test" type="Node2D"]
 
 [node name="TestCat" parent="." instance=ExtResource("1_qtrwu")]
+unique_name_in_owner = true
 
 [node name="Den" parent="." instance=ExtResource("2_7000r")]
 unique_name_in_owner = true
