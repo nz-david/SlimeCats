@@ -8,50 +8,61 @@ scale = Vector2(0.78, 0.78)
 transform = Transform2D(0.78, 0, 0, 0.78, 0, 0)
 script = ExtResource("1_j3t8f")
 
-[node name="Label" type="Label" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Retry" type="Button" parent="Control"]
+layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.28
-anchor_bottom = 1.28
-offset_left = 602.564
-offset_top = 282.051
-offset_right = 8627.0
-offset_bottom = 1836.61
+anchor_left = 15.8333
+anchor_top = 10.2885
+anchor_right = 20.5833
+anchor_bottom = 12.7635
+offset_top = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Retry"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.7692
+anchor_top = 13.3013
+anchor_right = 20.5942
+anchor_bottom = 15.8013
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.523059
+anchor_top = 0.435264
+anchor_right = 0.729201
+anchor_bottom = 0.527239
+offset_left = 581.642
+offset_top = 264.64
+offset_right = 10072.4
+offset_bottom = 2644.96
 scale = Vector2(0.025, 0.025)
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme_type_variation = &"HeaderLarge"
 theme_override_font_sizes/font_size = 1750
 text = "Game Over"
+metadata/_edit_use_anchors_ = true
 
-[node name="Quit" type="Button" parent="."]
-anchors_preset = -1
-anchor_right = 1.279
-anchor_bottom = 1.273
-offset_left = 694.0
-offset_top = 413.0
-offset_right = 1553.59
-offset_bottom = 865.096
-scale = Vector2(0.035, 0.035)
-theme_override_font_sizes/font_size = 710
-text = "Quit"
-
-[node name="Retry" type="Button" parent="."]
-anchors_preset = -1
-anchor_right = 1.277
-anchor_bottom = 1.276
-offset_left = 694.0
-offset_top = 353.0
-offset_right = -428.104
-offset_bottom = -304.848
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.235, 0.235)
-theme_override_font_sizes/font_size = 90
-text = "Retry"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
 position = Vector2(452.564, 358.974)
 rotation = -0.589921
 scale = Vector2(7.435, 7.4212)
 texture = ExtResource("1_vev4d")
 
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Control/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
