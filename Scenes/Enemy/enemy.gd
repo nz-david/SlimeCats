@@ -4,9 +4,12 @@ var speed = 60
 var den_pos
 var target_pos
 var MaxHealth = 1
+var range = 300
 @onready var Hit_Box = $Enemy_Hit_Box
 @onready var den = %Den
 @onready var Health = MaxHealth
+@onready var player = %TestCat/CharacterBody2D
+
 
 #func _ready() -> void:
 	# _ready function isn't used right now ,but probably will be later
@@ -16,8 +19,13 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 	
 	den_pos = den.position
+	var d = position - player.position
 	
-	velocity = (den.position - position).normalized() * speed
+	if(d.length() < range):
+		velocity = (player.position - position).normalized() * speed
+		#print("In Range")
+	else:
+		velocity = (den.position - position).normalized() * speed
 	
 	var collided = move_and_slide()
 	
