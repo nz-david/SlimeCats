@@ -213,13 +213,12 @@ scale = Vector2(82, 82)
 shape = SubResource("CapsuleShape2D_peaub")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(-64, 30)
-rotation = 4.71239
+position = Vector2(-4, 14)
+rotation = 6.28319
 scale = Vector2(0.152204, 0.152204)
 sprite_frames = SubResource("SpriteFrames_w60i8")
 animation = &"3_4 view backward run"
-frame = 1
-frame_progress = 0.750253
+frame_progress = 0.882857
 
 [node name="TempCam" type="Camera2D" parent="."]
 position = Vector2(5, 2)
