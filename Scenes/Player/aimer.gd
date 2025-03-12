@@ -15,6 +15,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	look_at(get_global_mouse_position())
+	rotate(PI/2)
 	st += delta
 	var ste := st>(4/sps)
 	if Input.is_action_pressed("pew") and ste and avail:
