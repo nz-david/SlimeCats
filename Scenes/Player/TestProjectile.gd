@@ -21,4 +21,6 @@ func _process(delta: float) -> void:
 		elif(other.is_in_group("den")):
 			queue_free()
 	
+	
+	
 	velocity = transform.y * speed

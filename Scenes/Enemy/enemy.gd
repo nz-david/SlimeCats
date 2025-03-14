@@ -5,7 +5,7 @@ var den_pos
 var target_pos
 var MaxHealth = 1
 var range = 300
-@onready var Hit_Box = $Enemy_Hit_Box
+@onready var Hit_Box = $Area2D/Hit_BoxHit_Box
 @onready var den = %Den
 @onready var Health = MaxHealth
 @onready var player = %TestCat/CharacterBody2D
@@ -33,10 +33,11 @@ func _physics_process(delta: float) -> void:
 		print("collided")
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
-	
-	
 			var other = collision.get_collider()
 			if(other.is_in_group("den")):
+				other.damage()
+				queue_free()
+			if(other.is_in_group("Player_Melee")):
 				other.damage()
 				queue_free()
 	# Gets den position

@@ -32,6 +32,10 @@ func _process(delta: float) -> void:
 		get_tree().create_timer(3).timeout.connect(reload)
 		
 		
+
+		
+	
+		
 func reload():
 	avail = true
 	capacity = 10
