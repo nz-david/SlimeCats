@@ -396,7 +396,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_52m4j")
 }],
-"loop": true,
+"loop": false,
 "name": &"3_4 view backward catapult",
 "speed": 5.0
 }, {
@@ -465,7 +465,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h2kjs")
 }],
-"loop": true,
+"loop": false,
 "name": &"3_4 view forward catapult",
 "speed": 5.0
 }, {
@@ -534,7 +534,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_14y46")
 }],
-"loop": true,
+"loop": false,
 "name": &"backward view catapult",
 "speed": 5.0
 }, {
@@ -603,7 +603,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x5to5")
 }],
-"loop": true,
+"loop": false,
 "name": &"forward view catapult",
 "speed": 5.0
 }, {
@@ -672,7 +672,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yq56m")
 }],
-"loop": true,
+"loop": false,
 "name": &"side view catapult",
 "speed": 5.0
 }, {
@@ -760,9 +760,7 @@ position = Vector2(-4, 14)
 rotation = 6.28319
 scale = Vector2(0.152204, 0.152204)
 sprite_frames = SubResource("SpriteFrames_w60i8")
-animation = &"side view run"
-frame = 2
-frame_progress = 0.689771
+animation = &"side view catapult"
 
 [node name="TempCam" type="Camera2D" parent="."]
 position = Vector2(5, 2)
