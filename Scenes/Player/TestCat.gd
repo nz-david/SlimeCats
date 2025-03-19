@@ -45,9 +45,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		match cat_angle:
 			0: cat_run.play("3_4 view forward idle")
+			1: cat_run.play("3_4 view backward idle")
 			2: cat_run.play("side view idle")
-			3: 
-				cat_run.play("3_4 view forward idle")
+			3: cat_run.play("3_4 view forward idle")
+			4: cat_run.play("3_4 view backward idle")
 			5: cat_run.play("side view idle")
 			6: cat_run.play("forward view idle")
 	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()

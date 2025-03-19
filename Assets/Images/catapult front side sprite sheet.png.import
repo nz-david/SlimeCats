@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://donwujjd47jc0"
-path="res://.godot/imported/Idleanimationstemp-ezgif.com-gif-to-sprite-converter.png-1f70fc274723e294ef26672a7e215531.ctex"
+uid="uid://g7r13ujbl3ap"
+path="res://.godot/imported/catapult front side sprite sheet.png-90538834ef6a7216abf4d4d1d3dd0753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Idleanimationstemp-ezgif.com-gif-to-sprite-converter.png"
-dest_files=["res://.godot/imported/Idleanimationstemp-ezgif.com-gif-to-sprite-converter.png-1f70fc274723e294ef26672a7e215531.ctex"]
+source_file="res://Assets/Images/catapult front side sprite sheet.png"
+dest_files=["res://.godot/imported/catapult front side sprite sheet.png-90538834ef6a7216abf4d4d1d3dd0753.ctex"]
 
 [params]
 
