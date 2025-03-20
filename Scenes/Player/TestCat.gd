@@ -16,9 +16,10 @@ func play_idle_animation():
 		CatAngle.WEST: cat_run.play("side view idle")
 		CatAngle.SOUTH: cat_run.play("forward view idle")
 		CatAngle.NORTH: cat_run.play("backward view idle")
-func on_animation_finished(animation_name):
-	player_state = PlayerState.IDLE
-	play_idle_animation()
+func on_animation_finished():
+	if ($AnimatedSprite2D.animation == "forward view catapult" or $AnimatedSprite2D.animation == "backward view catapult" or $AnimatedSprite2D.animation == "side view catapult" or $AnimatedSprite2D.animation == "3_4 view forward catapult" or $AnimatedSprite2D.animation == "3_4 view backward catapult"):
+		player_state = PlayerState.IDLE
+		play_idle_animation()
 	
 func _ready() -> void:
 	cat_run.animation_finished.connect(on_animation_finished)
@@ -84,10 +85,11 @@ func _physics_process(delta: float) -> void:
 				CatAngle.NORTH: cat_run.play("backward view catapult")
 
 	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
-	if direction:
-		velocity = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+	if player_state == PlayerState.MOVING or player_state == PlayerState.IDLE:
+		if direction:
+			velocity = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
 	
