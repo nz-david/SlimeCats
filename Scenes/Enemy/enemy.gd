@@ -12,7 +12,12 @@ var range = 300
 
 
 func _ready() -> void:
+
 	pass
+
+	den = get_tree().current_scene.get_node("%Den")
+	player = get_tree().current_scene.get_node("%TestCat/CharacterBody2D")
+
 	
 func _physics_process(delta: float) -> void:
 	if Health <= 0:
