@@ -11,8 +11,9 @@ var range = 300
 @onready var player = %TestCat/CharacterBody2D
 
 
-#func _ready() -> void:
-	# _ready function isn't used right now ,but probably will be later
+func _ready() -> void:
+	den = get_tree().current_scene.get_node("%Den")
+	player = get_tree().current_scene.get_node("%TestCat/CharacterBody2D")
 	
 func _physics_process(delta: float) -> void:
 	if Health <= 0:

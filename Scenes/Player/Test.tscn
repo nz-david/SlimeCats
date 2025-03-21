@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cniq2hvup4upo"]
+[gd_scene load_steps=6 format=3 uid="uid://cniq2hvup4upo"]
 
+[ext_resource type="Script" path="res://Scenes/Player/test.gd" id="1_pl7uy"]
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="1_qtrwu"]
 [ext_resource type="PackedScene" uid="uid://dlbvjdus7do2r" path="res://Scenes/Den/den.tscn" id="2_7000r"]
 [ext_resource type="PackedScene" uid="uid://dpqwuwlce0ikj" path="res://Scenes/Enemy/enemy.tscn" id="3_nk5ov"]
 
+[sub_resource type="Curve2D" id="Curve2D_j7rfv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -580, -340, 0, 0, 0, 0, 608, -340, 0, 0, 0, 0, 618, 345, 0, 0, 0, 0, -576, 348, 0, 0, 0, 0, -581, -337, 0, 0, 0, 0, -580, -340)
+}
+point_count = 6
+
 [node name="Test" type="Node2D"]
+script = ExtResource("1_pl7uy")
+enemy_scene = ExtResource("3_nk5ov")
 
 [node name="TestCat" parent="." instance=ExtResource("1_qtrwu")]
 unique_name_in_owner = true
@@ -12,16 +21,13 @@ unique_name_in_owner = true
 [node name="Den" parent="." instance=ExtResource("2_7000r")]
 unique_name_in_owner = true
 
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_j7rfv")
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(456, -208)
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-580, -340)
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(448, 30)
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(-416, -306)
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(-421, 282)
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
