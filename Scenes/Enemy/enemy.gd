@@ -5,6 +5,7 @@ var den_pos
 var target_pos
 var MaxHealth = 1
 var range = 300
+@onready var main = get_tree().current_scene
 @onready var Hit_Box = $Area2D/Hit_Box
 @onready var den = %Den
 @onready var Health = MaxHealth
@@ -21,6 +22,7 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if Health <= 0:
+		main.enemyexisting -= 1
 		queue_free()
 	
 	den_pos = den.position
@@ -41,10 +43,11 @@ func _physics_process(delta: float) -> void:
 			var other = collision.get_collider()
 			if(other.is_in_group("den")):
 				other.damage()
+				main.enemyexisting -= 1
 				queue_free()
 			if(other.is_in_group("Player_Melee")):
 				other.damage()
-				queue_free()
+				main.enemyexisting -= 1
 	# Gets den position
 	#den_pos = den.position
 	# Get the difference of the den's position and the enemy's position

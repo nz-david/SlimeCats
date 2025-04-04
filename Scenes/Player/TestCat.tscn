@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://7wb18i6hgf"]
+[gd_scene load_steps=105 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
@@ -8,10 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://c6pg0outlqgij" path="res://Assets/Images/idle back sprite sheet.png" id="4_ae2ei"]
 [ext_resource type="Texture2D" uid="uid://donwujjd47jc0" path="res://Assets/Images/idle side and front sprite sheet.png" id="4_dg2ji"]
 [ext_resource type="Texture2D" uid="uid://g7r13ujbl3ap" path="res://Assets/Images/catapult front side sprite sheet.png" id="6_v2spl"]
+[ext_resource type="Script" path="res://Scenes/Player/label_2.gd" id="9_pt0cd"]
+[ext_resource type="Script" path="res://Scenes/Player/wave.gd" id="9_xsgfp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_peaub"]
 radius = 0.5
-height = 2.0
+height = 1.56098
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ha72l"]
 
@@ -736,7 +738,7 @@ collision_mask = 4
 script = ExtResource("1_ocf2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 3.8147e-06)
+position = Vector2(0, 22)
 scale = Vector2(82, 82)
 shape = SubResource("CapsuleShape2D_peaub")
 
@@ -762,14 +764,14 @@ script = ExtResource("2_fjywb")
 [node name="Hurt_Box" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Hurt_Box"]
-position = Vector2(0, 3.8147e-06)
+position = Vector2(0, 22)
 scale = Vector2(82, 82)
 shape = SubResource("CapsuleShape2D_peaub")
 
 [node name="Hit_Box" type="Area2D" parent="CharacterBody2D" groups=["Player_Melee"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Hit_Box"]
-position = Vector2(0, -120.99)
+position = Vector2(1, -81)
 rotation = 1.5708
 scale = Vector2(1.63, 1.63)
 shape = SubResource("CapsuleShape2D_3jc6m")
@@ -793,16 +795,42 @@ animation = &"3_4 view backward idle"
 [node name="TempCam" type="Camera2D" parent="."]
 position = Vector2(5, 2)
 
-[node name="Label" type="Label" parent="."]
-offset_left = -553.0
-offset_top = 251.0
-offset_right = -292.0
-offset_bottom = 353.0
+[node name="Ammo" type="Label" parent="."]
+z_index = 1000
+z_as_relative = false
+offset_left = -557.0
+offset_top = 265.0
+offset_right = -296.0
+offset_bottom = 367.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Test
 "
 script = ExtResource("3_76tq7")
+
+[node name="Wave" type="Label" parent="."]
+z_index = 1000
+z_as_relative = false
+offset_left = -85.0
+offset_top = -314.0
+offset_right = 87.0
+offset_bottom = -259.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Wave = 1"
+script = ExtResource("9_xsgfp")
+
+[node name="Health" type="Label" parent="."]
+z_index = 1000
+offset_left = -560.0
+offset_top = 218.0
+offset_right = -431.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Health
+"
+script = ExtResource("9_pt0cd")
 
 [connection signal="area_entered" from="CharacterBody2D/Hurt_Box" to="CharacterBody2D" method="_on_hurt_box_area_entered"]
 [connection signal="timeout" from="CharacterBody2D/Melee_Timer" to="CharacterBody2D" method="_on_melee_timer_timeout"]
