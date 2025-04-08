@@ -79,5 +79,4 @@ frame_progress = 0.686897
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character_Jolt/Interaction-Area"]
 position = Vector2(0.400001, 0.4)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_48vyk")
