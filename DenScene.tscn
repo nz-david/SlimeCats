@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://crtlupoycseky"]
+
+[ext_resource type="Script" path="res://den_scene.gd" id="1_6c0ns"]
+[ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="2_yw6kq"]
+[ext_resource type="Texture2D" uid="uid://deb25xjb7e76v" path="res://Assets/Images/Jolt Neutral Lightning.PNG" id="3_gcs8w"]
+[ext_resource type="Texture2D" uid="uid://xs3gfkwhxxbn" path="res://Assets/Images/temproom.png" id="3_k8s2i"]
+[ext_resource type="Script" path="res://interaction_area.gd" id="4_50s1t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvg20"]
+atlas = ExtResource("3_k8s2i")
+region = Rect2(0, 0, 1708, 1238)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44j54"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvg20")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pywoq"]
+atlas = ExtResource("3_gcs8w")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgu4v"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pywoq")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48vyk"]
+size = Vector2(52.6, 49.4)
+
+[node name="DenScene" type="Node2D"]
+script = ExtResource("1_6c0ns")
+
+[node name="TestCat" parent="." instance=ExtResource("2_yw6kq")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.721667, 0.634109)
+sprite_frames = SubResource("SpriteFrames_44j54")
+animation = &"new_animation"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Character_Jolt" type="Node2D" parent="."]
+
+[node name="Interaction-Area" type="Area2D" parent="Character_Jolt"]
+position = Vector2(300, 0)
+scale = Vector2(5, 5)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("4_50s1t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character_Jolt/Interaction-Area"]
+scale = Vector2(0.019, 0.02)
+sprite_frames = SubResource("SpriteFrames_hgu4v")
+animation = &"new_animation"
+frame_progress = 0.686897
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character_Jolt/Interaction-Area"]
+position = Vector2(0.400001, 0.4)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_48vyk")

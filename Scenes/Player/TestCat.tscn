@@ -725,7 +725,7 @@ animations = [{
 
 [node name="TestCat" type="Node2D" groups=["friends"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Friends"]]
 position = Vector2(41, 42)
 collision_layer = 4
 collision_mask = 4

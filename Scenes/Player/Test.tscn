@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cniq2hvup4upo"]
+[gd_scene load_steps=5 format=3 uid="uid://cniq2hvup4upo"]
 
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="1_qtrwu"]
 [ext_resource type="PackedScene" uid="uid://dlbvjdus7do2r" path="res://Scenes/Den/den.tscn" id="2_7000r"]
 [ext_resource type="PackedScene" uid="uid://dpqwuwlce0ikj" path="res://Scenes/Enemy/enemy.tscn" id="3_nk5ov"]
+[ext_resource type="Script" path="res://Scenes/Player/denbutton.gd" id="4_yal5y"]
 
 [node name="Test" type="Node2D"]
 
@@ -25,3 +26,13 @@ position = Vector2(-416, -306)
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource("3_nk5ov")]
 position = Vector2(-421, 282)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 364.0
+offset_top = 211.0
+offset_right = 372.0
+offset_bottom = 219.0
+scale = Vector2(8.8, 7.96)
+script = ExtResource("4_yal5y")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

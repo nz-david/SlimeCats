@@ -6,11 +6,9 @@ var capacity = 10.0
 var avail = true
 
 @onready var scene = load("res://Scenes/Player/TestProjectile.tscn")
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,7 +17,7 @@ func _process(delta: float) -> void:
 	rotate(PI/2)
 	st += delta
 	var ste := st>(4/sps)
-	if Input.is_action_pressed("pew") and ste and avail:
+	if Input.is_action_pressed("pew") and ste and avail and Plswork.can_attack:
 		var TestProjectile = scene.instantiate()
 		
 		get_tree().get_root().get_node("Test").add_child(TestProjectile)

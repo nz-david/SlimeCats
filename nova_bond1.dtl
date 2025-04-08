@@ -1,0 +1,5 @@
+testcharacter: this is a test
+- yes
+	testcharacter: hey, you agree with me!
+- no
+	testcharacter: but i say yes
