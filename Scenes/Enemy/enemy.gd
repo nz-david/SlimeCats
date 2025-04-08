@@ -5,17 +5,24 @@ var den_pos
 var target_pos
 var MaxHealth = 1
 var range = 300
-@onready var Hit_Box = $Enemy_Hit_Box
+@onready var main = get_tree().current_scene
+@onready var Hit_Box = $Area2D/Hit_Box
 @onready var den = %Den
 @onready var Health = MaxHealth
 @onready var player = %TestCat/CharacterBody2D
 
 
-#func _ready() -> void:
-	# _ready function isn't used right now ,but probably will be later
+func _ready() -> void:
+
+	pass
+
+	den = get_tree().current_scene.get_node("%Den")
+	player = get_tree().current_scene.get_node("%TestCat/CharacterBody2D")
+
 	
 func _physics_process(delta: float) -> void:
 	if Health <= 0:
+		main.enemyexisting -= 1
 		queue_free()
 	
 	den_pos = den.position
@@ -33,12 +40,14 @@ func _physics_process(delta: float) -> void:
 		print("collided")
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
-	
-	
 			var other = collision.get_collider()
 			if(other.is_in_group("den")):
 				other.damage()
+				main.enemyexisting -= 1
 				queue_free()
+			if(other.is_in_group("Player_Melee")):
+				other.damage()
+				main.enemyexisting -= 1
 	# Gets den position
 	#den_pos = den.position
 	# Get the difference of the den's position and the enemy's position

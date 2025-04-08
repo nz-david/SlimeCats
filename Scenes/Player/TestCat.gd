@@ -1,12 +1,29 @@
 extends CharacterBody2D
 
+
+
+var MaxHealth = 3
+
 enum CatAngle {NORTH, NORTHEAST, NORTHWEST, SOUTH, SOUTHEAST, SOUTHWEST, WEST, EAST}
 var cat_angle = CatAngle.NORTH
 enum PlayerState {IDLE, MOVING, ATTACK}
 var player_state = PlayerState.IDLE
+
 var SPEED = 300.0
+var is_attacking = false
+var being_attacked = false
+
 @onready var cat_run = $AnimatedSprite2D
+
+@onready var hurt_timer = $Hurt_Timer
+@onready var hit_box = $Hit_Box/CollisionShape2D
+@onready var melee_timer = $Melee_Timer
+@onready var hurt_box = $Hurt_Box/CollisionShape2D
+@export var Health = MaxHealth
+
 func play_idle_animation():
+	#if cat_run.is_playing():
+		#cat_run.stop()
 	match cat_angle:
 		CatAngle.SOUTHEAST: cat_run.play("3_4 view forward idle")
 		CatAngle.NORTHEAST: cat_run.play("3_4 view backward idle")
@@ -24,8 +41,39 @@ func on_animation_finished():
 func _ready() -> void:
 	cat_run.animation_finished.connect(on_animation_finished)
 	print("meow")
+	
+
 
 func _physics_process(delta: float) -> void:
+	if Health <= 0:
+		get_tree().change_scene_to_file("res://gameover.tscn")
+	
+	animate_based_on_input_controls()
+
+	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
+	if player_state == PlayerState.MOVING or player_state == PlayerState.IDLE:
+		if direction:
+			velocity = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.y = move_toward(velocity.y, 0, SPEED)
+	elif player_state == PlayerState.ATTACK:
+		velocity.x = 0
+		velocity.y = 0
+	move_and_slide()
+	
+
+
+	if Input.is_action_pressed("melee") and not is_attacking:
+		hit_box.disabled = false
+		melee_timer.start()
+		is_attacking = true
+#func on_Hurt_Box_entered(area):
+	#if area.is_in_group("Enemies"):
+		#Health -= 1
+		#print("Owch Owwie")
+
+func animate_based_on_input_controls():
 	var is_up_pressed :=Input.is_action_pressed ("up")
 	var is_down_pressed :=Input.is_action_pressed ("down")
 	var is_right_pressed :=Input.is_action_pressed ("right")
@@ -69,8 +117,8 @@ func _physics_process(delta: float) -> void:
 			cat_run.play("backward view run")
 			cat_angle = CatAngle.NORTH
 		else:
-			player_state = PlayerState.IDLE
 			play_idle_animation()
+	
 		var is_catapult_start :=Input.is_action_just_pressed("catapult")
 		if is_catapult_start:
 			player_state = PlayerState.ATTACK
@@ -83,16 +131,21 @@ func _physics_process(delta: float) -> void:
 				CatAngle.WEST: cat_run.play("side view catapult")
 				CatAngle.SOUTH: cat_run.play("forward view catapult")
 				CatAngle.NORTH: cat_run.play("backward view catapult")
+		
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Enemies") and not being_attacked:
+		Health -= 1
+		print("Owch Owwie")
+		hurt_timer.start()
+		being_attacked = true
+		hurt_box.disabled = true
 
-	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
-	if player_state == PlayerState.MOVING or player_state == PlayerState.IDLE:
-		if direction:
-			velocity = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			velocity.y = move_toward(velocity.y, 0, SPEED)
-	elif player_state == PlayerState.ATTACK:
-		velocity.x = 0
-		velocity.y = 0
-	move_and_slide()
-	
+func _on_hurt_timer_timeout() -> void:
+	being_attacked = false
+	hurt_box.disabled = false
+
+
+
+func _on_melee_timer_timeout() -> void:
+	hit_box.disabled = true
+	is_attacking = false

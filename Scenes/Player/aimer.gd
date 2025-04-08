@@ -31,6 +31,13 @@ func _process(delta: float) -> void:
 		avail = false
 		get_tree().create_timer(3).timeout.connect(reload)
 		
+	if Input.is_action_pressed("reload"):
+		capacity = 0
+		avail = false
+		get_tree().create_timer(3).timeout.connect(reload)
+
+		
+
 		
 func reload():
 	avail = true
