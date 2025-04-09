@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var enemyammount = 10
 var enemyexisting = 0
 var ammountspawning = 10
@@ -10,7 +11,7 @@ var wave = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Plswork.can_attack = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
