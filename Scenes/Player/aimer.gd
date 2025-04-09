@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 	rotate(PI/2)
 	st += delta
 	var ste := st>(4/sps)
-	if Input.is_action_pressed("pew") and ste and avail and Plswork.can_attack:
+	if Input.is_action_pressed("pew") and ste and avail and can_attack.can_attack:
 		var TestProjectile = scene.instantiate()
 		
 		get_tree().get_root().get_node("Test").add_child(TestProjectile)
