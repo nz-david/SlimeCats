@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://di75s44t8q31h"
+path="res://.godot/imported/A Place to Breathe.mp3-bf148a620b4e613c5231a7942c99b6aa.mp3str"
+
+[deps]
+
+source_file="res://Assets/A Place to Breathe.mp3"
+dest_files=["res://.godot/imported/A Place to Breathe.mp3-bf148a620b4e613c5231a7942c99b6aa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

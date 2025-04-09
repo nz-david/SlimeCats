@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://beaktovnt3ont"]
+[gd_scene load_steps=14 format=3 uid="uid://beaktovnt3ont"]
 
 [ext_resource type="Script" path="res://den_scene.gd" id="1_sav0s"]
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="2_s33nd"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bud68cyk26q1l" path="res://Assets/Images/temp_den.png" id="4_4cwt1"]
 [ext_resource type="Texture2D" uid="uid://dk0j7xbypxk2c" path="res://Assets/Images/Jolt/Jolt Neutral Light.PNG" id="5_1o7n2"]
 [ext_resource type="Script" path="res://button.gd" id="7_kgt6k"]
+[ext_resource type="AudioStream" uid="uid://ctdjew1i4k1b2" path="res://den_tune.tres" id="8_ty40e"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="9_qy76s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_thwxy"]
 animations = [{
@@ -41,6 +43,7 @@ size = Vector2(19.7674, 20.3972)
 script = ExtResource("1_sav0s")
 
 [node name="TestCat" parent="." instance=ExtResource("2_s33nd")]
+z_index = 1
 
 [node name="Node" type="Node" parent="TestCat"]
 script = ExtResource("3_4pfme")
@@ -75,5 +78,12 @@ offset_top = 185.0
 offset_right = 519.0
 offset_bottom = 278.0
 script = ExtResource("7_kgt6k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ty40e")
+volume_db = 24.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("9_qy76s")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
