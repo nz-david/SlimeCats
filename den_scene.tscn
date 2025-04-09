@@ -52,7 +52,6 @@ scale = Vector2(6.5, 6.5)
 sprite_frames = SubResource("SpriteFrames_thwxy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.07, 1.07)
 
 [node name="Character_Jolt" type="Node2D" parent="."]
 position = Vector2(448, 0)
