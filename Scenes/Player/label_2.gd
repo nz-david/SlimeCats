@@ -1,6 +1,6 @@
 extends Label
 
-@onready var Player = $"../CharacterBody2D"
+@onready var Player = %TestCat
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,5 +10,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(is_instance_valid(Player)):
-		var health = $"../CharacterBody2D".Health
+		var health = Player.Health
 		text = "Health = " + str(health)
