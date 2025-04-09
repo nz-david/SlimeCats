@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cniq2hvup4upo"]
+[gd_scene load_steps=10 format=3 uid="uid://cniq2hvup4upo"]
 
 [ext_resource type="Script" path="res://Scenes/Player/test.gd" id="1_pl7uy"]
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="1_qtrwu"]
 [ext_resource type="PackedScene" uid="uid://dlbvjdus7do2r" path="res://Scenes/Den/den.tscn" id="2_7000r"]
 [ext_resource type="PackedScene" uid="uid://dpqwuwlce0ikj" path="res://Scenes/Enemy/enemy.tscn" id="3_nk5ov"]
 [ext_resource type="Script" path="res://Scenes/Player/button.gd" id="5_y38ud"]
+[ext_resource type="Script" path="res://Scenes/Player/label.gd" id="6_dv475"]
+[ext_resource type="Script" path="res://Scenes/Player/wave.gd" id="7_dck13"]
+[ext_resource type="Script" path="res://Scenes/Player/label_2.gd" id="8_dai2w"]
 
 [sub_resource type="Curve2D" id="Curve2D_j7rfv"]
 _data = {
@@ -44,6 +47,46 @@ offset_top = 190.0
 offset_right = 514.0
 offset_bottom = 286.0
 script = ExtResource("5_y38ud")
+
+[node name="TempCam" type="Camera2D" parent="."]
+position = Vector2(5, 2)
+
+[node name="Ammo" type="Label" parent="."]
+z_index = 1000
+z_as_relative = false
+offset_left = -557.0
+offset_top = 265.0
+offset_right = -296.0
+offset_bottom = 367.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Test
+"
+script = ExtResource("6_dv475")
+
+[node name="Wave" type="Label" parent="."]
+z_index = 1000
+z_as_relative = false
+offset_left = -85.0
+offset_top = -314.0
+offset_right = 87.0
+offset_bottom = -259.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Wave = 1"
+script = ExtResource("7_dck13")
+
+[node name="Health" type="Label" parent="."]
+z_index = 1000
+offset_left = -560.0
+offset_top = 218.0
+offset_right = -431.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Health
+"
+script = ExtResource("8_dai2w")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

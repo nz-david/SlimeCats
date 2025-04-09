@@ -7,9 +7,9 @@ var MaxHealth = 1
 var range = 300
 @onready var main = get_tree().current_scene
 @onready var Hit_Box = $Area2D/Hit_Box
-@onready var den = %Den
+@onready var den
 @onready var Health = MaxHealth
-@onready var player = %TestCat/CharacterBody2D
+@onready var player
 
 
 func _ready() -> void:
@@ -17,7 +17,7 @@ func _ready() -> void:
 	pass
 
 	den = get_tree().current_scene.get_node("%Den")
-	player = get_tree().current_scene.get_node("%TestCat/CharacterBody2D")
+	player = get_tree().current_scene.get_node("%TestCat")
 
 	
 func _physics_process(delta: float) -> void:
