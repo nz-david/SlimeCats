@@ -4,7 +4,3 @@
 .DS_Store
 *.dll
 *.so
-addons/godot-git-plugin/win64/~libgit_plugin.windows.editor.x86_64.dll
-*/**/*.dll
-*/*.dll
-*/*.so
