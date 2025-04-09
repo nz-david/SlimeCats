@@ -9,6 +9,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(is_instance_valid(Main)):
+	if(is_instance_valid(Main)) and Plswork.can_attack:
 		var wave = Main.wave
 		text = "Wave " + str(wave)

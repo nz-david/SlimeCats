@@ -18,19 +18,16 @@ config/icon="res://Assets/Images/icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Plswork="*res://plswork.gd"
+Plswork="*res://Plswork.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"testcharacter": "res://testcharacter.dch"
+"Jolt": "res://Jolt.dch"
 }
 directories/dtl_directory={
 "nova_bond1": "res://nova_bond1.dtl"
 }
-glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
 
 [display]
 
@@ -54,6 +51,7 @@ Friends=""
 Enemies=""
 Player_Projectiles="Projectiles the player fires"
 den="Da Den"
+Player_Melee="Player's melee attack"
 
 [input]
 
@@ -96,7 +94,8 @@ pew={
 }
 melee={
 "deadzone": 0.5,
-"events": []
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
 }
 up={
 "deadzone": 0.5,
@@ -121,6 +120,11 @@ right={
 catapult={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+reload={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
 ]
 }
 dialogic_default_action={

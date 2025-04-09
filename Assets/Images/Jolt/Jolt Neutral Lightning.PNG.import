@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deb25xjb7e76v"
-path="res://.godot/imported/Jolt Neutral Lightning.PNG-7cdfeabde9a7a4b3c0cc31639dcbed52.ctex"
+uid="uid://dyiil5ue62db"
+path="res://.godot/imported/Jolt Neutral Lightning.PNG-f1c88024dd7bd3da3f96867b4259b32e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Jolt Neutral Lightning.PNG"
-dest_files=["res://.godot/imported/Jolt Neutral Lightning.PNG-7cdfeabde9a7a4b3c0cc31639dcbed52.ctex"]
+source_file="res://Assets/Images/Jolt/Jolt Neutral Lightning.PNG"
+dest_files=["res://.godot/imported/Jolt Neutral Lightning.PNG-f1c88024dd7bd3da3f96867b4259b32e.ctex"]
 
 [params]
 

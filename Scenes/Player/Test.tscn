@@ -1,11 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://cniq2hvup4upo"]
+[gd_scene load_steps=7 format=3 uid="uid://cniq2hvup4upo"]
 
+[ext_resource type="Script" path="res://Scenes/Player/test.gd" id="1_pl7uy"]
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="1_qtrwu"]
 [ext_resource type="PackedScene" uid="uid://dlbvjdus7do2r" path="res://Scenes/Den/den.tscn" id="2_7000r"]
 [ext_resource type="PackedScene" uid="uid://dpqwuwlce0ikj" path="res://Scenes/Enemy/enemy.tscn" id="3_nk5ov"]
-[ext_resource type="Script" path="res://Scenes/Player/denbutton.gd" id="4_yal5y"]
+[ext_resource type="Script" path="res://Scenes/Player/button.gd" id="5_y38ud"]
+
+[sub_resource type="Curve2D" id="Curve2D_j7rfv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -580, -340, 0, 0, 0, 0, 608, -340, 0, 0, 0, 0, 618, 345, 0, 0, 0, 0, -576, 348, 0, 0, 0, 0, -581, -337, 0, 0, 0, 0, -580, -340)
+}
+point_count = 6
 
 [node name="Test" type="Node2D"]
+script = ExtResource("1_pl7uy")
+enemy_scene = ExtResource("3_nk5ov")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -870.0
+offset_top = -601.0
+offset_right = 1049.0
+offset_bottom = 1318.0
+color = Color(0.171375, 0.362532, 0.191303, 1)
 
 [node name="TestCat" parent="." instance=ExtResource("1_qtrwu")]
 unique_name_in_owner = true
@@ -13,26 +29,21 @@ unique_name_in_owner = true
 [node name="Den" parent="." instance=ExtResource("2_7000r")]
 unique_name_in_owner = true
 
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_j7rfv")
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(456, -208)
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-580, -340)
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(448, 30)
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(-416, -306)
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource("3_nk5ov")]
-position = Vector2(-421, 282)
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 364.0
-offset_top = 211.0
-offset_right = 372.0
-offset_bottom = 219.0
-scale = Vector2(8.8, 7.96)
-script = ExtResource("4_yal5y")
+offset_left = 330.0
+offset_top = 190.0
+offset_right = 514.0
+offset_bottom = 286.0
+script = ExtResource("5_y38ud")
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

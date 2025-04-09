@@ -1,0 +1,76 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+"default_portrait": "neutral light",
+"description": "",
+"display_name": "Jolt",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"antler light": {
+"export_overrides": {
+"image": "\"res://Assets/Images/Jolt/Jolt Holding Antler Light.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"curious light": {
+"export_overrides": {
+"image": "\"res://Assets/Images/Jolt/Jolt Curious Light.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"forced smile light": {
+"export_overrides": {
+"image": "\"res://Assets/Images/Jolt/Jolt Forced Smile Light.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"happy light": {
+"export_overrides": {
+"image": "\"res://Assets/Images/Jolt/Jolt Happy Light.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutral light": {
+"export_overrides": {
+"image": "\"res://Assets/Images/Jolt/Jolt Neutral Light.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sad light": {
+"export_overrides": {
+"image": "\"res://Assets/Images/Jolt/Jolt Sad Light.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

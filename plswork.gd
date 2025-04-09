@@ -1,2 +1,2 @@
-extends Node2D
-var can_attack :=true
+extends Node
+var can_attack := true

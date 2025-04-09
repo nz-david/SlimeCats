@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xs3gfkwhxxbn"
-path="res://.godot/imported/temproom.png-bb7cd5d347a6f27bdebe2ffb30d65916.ctex"
+uid="uid://deccjvw6ljupv"
+path="res://.godot/imported/Jolt Forced Smile Lightning.PNG-f18f83d864e0de8b75ee59ce4f1afd98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/temproom.png"
-dest_files=["res://.godot/imported/temproom.png-bb7cd5d347a6f27bdebe2ffb30d65916.ctex"]
+source_file="res://Assets/Images/Jolt/Jolt Forced Smile Lightning.PNG"
+dest_files=["res://.godot/imported/Jolt Forced Smile Lightning.PNG-f18f83d864e0de8b75ee59ce4f1afd98.ctex"]
 
 [params]
 

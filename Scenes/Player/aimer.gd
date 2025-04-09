@@ -6,9 +6,11 @@ var capacity = 10.0
 var avail = true
 
 @onready var scene = load("res://Scenes/Player/TestProjectile.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
