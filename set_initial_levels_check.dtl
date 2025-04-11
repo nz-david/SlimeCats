@@ -1,0 +1,4 @@
+if {initial_values_set} == "false":
+	jump initial_levels/
+else:
+	[end_timeline]

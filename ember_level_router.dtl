@@ -1,0 +1,32 @@
+if {ember_bond_level} == 0:
+	jump ember_random_0/
+if {ember_bond_level} == 1:
+	if {ember_support_1_seen} == "true":
+		jump ember_random_1/
+	else:
+		jump ember_support_1/
+if {ember_bond_level} == 2:
+	if {ember_support_2_seen} == "true":
+		jump ember_random_2/
+	else:
+		jump ember_support_2/
+if {ember_bond_level} == 3:
+	if {ember_support_3_seen} == "true":
+		jump ember_random_3/
+	else:
+		jump ember_support_3/
+if {ember_bond_level} == 4:
+	if {ember_support_4_seen} == "true":
+		jump ember_random_4/
+	else:
+		jump ember_support_4/
+if {ember_bond_level} == 5:
+	if {ember_support_5_seen} == "true":
+		jump ember_random_5/
+	else:
+		jump ember_support_5/
+if {ember_bond_level} == 6:
+	if {ember_support_6_seen} == "true":
+		jump ember_random_6/
+	else:
+		jump ember_support_6/

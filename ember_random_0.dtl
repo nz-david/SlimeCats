@@ -1,0 +1,4 @@
+join Ember center
+Ember: Get out.
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

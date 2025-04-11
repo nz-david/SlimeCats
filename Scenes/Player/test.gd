@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var set_bond_values := "set_initial_levels_check"
 
 var enemyammount = 10
 var enemyexisting = 0
@@ -12,6 +13,7 @@ var wave = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	can_attack.can_attack = true
+	Dialogic.start(set_bond_values)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,15 @@
+join Ember center
+Ember: Lemme guess–you’re here to ask me how I’m feeling or some other mushy nonsense.
+Ember: Spoiler alert\: still hot, and still not in the mood.
+- Just figured I’d check in.
+	Ember: Well, now you've checked.
+	Ember: Go on, then.
+	set {ember_bond_points} += 1
+- No harm in making sure you’re not smoldering in a bad way.
+	Ember: ...Heh. Point taken.
+- Then don't expect anyone to care next time.
+	Ember: That's the idea.
+	set {ember_bond_points} -= 2
+set {ember_support_1_seen} = "true"
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

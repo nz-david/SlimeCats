@@ -1,0 +1,18 @@
+if {ember_bond_points} >= 20:
+	set {ember_bond_level} = 6
+elif {ember_bond_points} >= 16:
+	set {ember_bond_level} = 5
+elif {ember_bond_points} >= 12:
+	set {ember_bond_level} = 4
+elif {ember_bond_points} >= 9:
+	set {ember_bond_level} = 3
+elif {ember_bond_points} >= 5:
+	set {ember_bond_level} = 2
+elif {ember_bond_points} >= 1:
+	set {ember_bond_level} = 1
+elif {ember_bond_points} < 1:
+	set {ember_bond_level} = 0
+if {ember_dialogue_happened} == "true":
+	[end_timeline]
+else:
+	jump ember_level_router/

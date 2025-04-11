@@ -1,0 +1,11 @@
+join Ember center
+set {random_dialogue_choice} = range(1,3).pick_random()
+if {random_dialogue_choice} == 1:
+	Ember: You keep me from burning out, whether you know it or not.
+elif {random_dialogue_choice} >= 2:
+	Ember: For once, the fire’s not just mine to carry. And you know what?
+	Ember: I think I’m okay with that.
+else:
+	Ember: this means its broken
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

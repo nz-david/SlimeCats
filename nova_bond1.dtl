@@ -1,6 +1,4 @@
-join Jolt left [animation="Bounce In"]
-Jolt (happy light): Hi!!!
-Jolt (curious light): This is a test of the dialogue system, right? 
+Jolt (curious light): This is a test of the dialogue system, right?
 - yes
 	Jolt (happy light): I knew it!
 - no

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var dialogic_timeline := "nova_bond1"
+@export var dialogic_timeline := "aaa_for_testing"
 var player_in_range := false
 func _ready():
 	print("Area2D ready!")

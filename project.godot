@@ -23,10 +23,47 @@ can_attack="*res://can_attack.gd"
 [dialogic]
 
 directories/dch_directory={
-"Jolt": "res://Jolt.dch"
+"Ember": "res://Ember.dch",
+"Jolt": "res://Jolt.dch",
+"Ripple": "res://Ripple.dch",
+"Shade": "res://Shade.dch",
+"Thorn": "res://Thorn.dch",
+"nova": "res://nova.dch"
 }
 directories/dtl_directory={
-"nova_bond1": "res://nova_bond1.dtl"
+"aaa_for_testing": "res://aaa_for_testing.dtl",
+"ember_check_level_up": "res://ember_check_level_up.dtl",
+"ember_level_router": "res://ember_level_router.dtl",
+"ember_random_0": "res://ember_random_0.dtl",
+"ember_random_1": "res://ember_random_1.dtl",
+"ember_random_2": "res://ember_random_2.dtl",
+"ember_random_3": "res://ember_random_3.dtl",
+"ember_random_4": "res://ember_random_4.dtl",
+"ember_random_5": "res://ember_random_5.dtl",
+"ember_random_6": "res://ember_random_6.dtl",
+"ember_support_1": "res://ember_support_1.dtl",
+"ember_support_2": "res://ember_support_2.dtl",
+"ember_support_3": "res://ember_support_3.dtl",
+"ember_support_4": "res://ember_support_4.dtl",
+"ember_support_5": "res://ember_support_5.dtl",
+"ember_support_6": "res://ember_support_6.dtl",
+"ember_talk_handler": "res://ember_talk_handler.dtl",
+"initial_levels": "res://initial_levels.dtl",
+"nova_bond1": "res://nova_bond1.dtl",
+"set_initial_levels_check": "res://set_initial_levels_check.dtl"
+}
+variables={
+"ember_bond_level": 0.0,
+"ember_bond_points": 1.0,
+"ember_dialogue_happened": "",
+"ember_support_1_seen": "",
+"ember_support_2_seen": "",
+"ember_support_3_seen": "",
+"ember_support_4_seen": "",
+"ember_support_5_seen": "",
+"ember_support_6_seen": "",
+"initial_values_set": "",
+"random_dialogue_choice": ""
 }
 
 [display]
