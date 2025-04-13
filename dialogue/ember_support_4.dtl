@@ -1,0 +1,19 @@
+join Ember (neutral) center
+Ember: I don’t get the others sometimes.
+Ember (sad): The way they all laugh so easily.
+Ember (focused): Like this place isn't held together only by sheer will.
+Ember (sad): ...
+Ember: I've never been good at... softness.
+- You’re better at it than you think. You just use different tools.
+	Ember (embarrassed): ...Flattery doesn't suit you.
+	Ember (neutral): But I'll allow it.
+	set {ember_bond_points} += 2
+- You protect what matters. That's your softness.
+	Ember (neutral): ...never thought of it like that.
+	set {ember_bond_points} += 1
+- Maybe you're just not built for it.
+	Ember (sad): ...Thanks for the reminder.
+	set {ember_bond_points} -= 1
+set {ember_support_4_seen} = "true"
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

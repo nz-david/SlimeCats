@@ -1,0 +1,16 @@
+join Ember (neutral) center
+Ember (focused): I used to think the only way to matter was to burn brighter than anyone else. Turns out…
+Ember (neutral): Burning out helps no one.
+Ember (neutral): Even sparks need a place to land.
+- You've become the flame that steadies, not scorches.
+	Ember (happy): Hah. That's almost poetic.
+	Ember (neutral): Nova would be proud.
+	set {ember_bond_points} += 2
+- You can still burn bright. Just... not alone anymore.
+	Ember: my creator forgot to write a response for this choice and he will 100% forget that he wrote this here and be very confused in the future.
+	set {ember_bond_points} += 1
+- Sounds like you're losing your edge.
+	Ember (neutral): ...Maybe I'm finding a better one.
+set {ember_support_5_seen} = "true"
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

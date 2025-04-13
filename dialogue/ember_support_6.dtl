@@ -1,0 +1,15 @@
+join Ember (neutral) center
+Ember (sad): I don't know what's coming. I don’t like not knowing. But I do know this–if things fall apart…
+Ember (neutral): I want to be the one standing between the collapse and the ones who matter.
+- You already are.
+	Ember (focused): Then I'll hold the line, no matter what.
+	set {ember_bond_points} += 2
+- Whatever comes, we face it together.
+	Ember (happy): ...Then let's make sure they don't regret trusting us.
+	set {ember_bond_points} += 1
+- Hope that's enough.
+	Ember (focused): So do I.
+	Ember (neutral): But we'll find out, won't we?
+set {ember_support_6_seen} = "true"
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

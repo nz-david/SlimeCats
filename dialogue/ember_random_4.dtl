@@ -1,0 +1,13 @@
+join Ember center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	Ember (neutral): Nova said I’ve ‘developed nuance’, whatever that means.
+elif {random_dialogue_choice} == 2:
+	Ember (happy): That moss patch over there? I actually like how it smells.
+	Ember (focused): Don’t tell anyone.
+elif {random_dialogue_choice} >= 3:
+	Ember (neutral): Don’t get used to me talking like this. I’m still the same hot Ember.
+else:
+	Ember: this means its broken
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

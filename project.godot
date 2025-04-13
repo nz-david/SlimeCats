@@ -17,40 +17,40 @@ config/icon="res://Assets/Images/icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 can_attack="*res://can_attack.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"Ember": "res://Ember.dch",
-"Jolt": "res://Jolt.dch",
-"Ripple": "res://Ripple.dch",
-"Shade": "res://Shade.dch",
-"Thorn": "res://Thorn.dch",
-"nova": "res://nova.dch"
+"Ember": "res://dialogue/Ember.dch",
+"Jolt": "res://dialogue/Jolt.dch",
+"Ripple": "res://dialogue/Ripple.dch",
+"Shade": "res://dialogue/Shade.dch",
+"Thorn": "res://dialogue/Thorn.dch",
+"nova": "res://dialogue/nova.dch"
 }
 directories/dtl_directory={
-"aaa_for_testing": "res://aaa_for_testing.dtl",
-"ember_check_level_up": "res://ember_check_level_up.dtl",
-"ember_level_router": "res://ember_level_router.dtl",
-"ember_random_0": "res://ember_random_0.dtl",
-"ember_random_1": "res://ember_random_1.dtl",
-"ember_random_2": "res://ember_random_2.dtl",
-"ember_random_3": "res://ember_random_3.dtl",
-"ember_random_4": "res://ember_random_4.dtl",
-"ember_random_5": "res://ember_random_5.dtl",
-"ember_random_6": "res://ember_random_6.dtl",
-"ember_support_1": "res://ember_support_1.dtl",
-"ember_support_2": "res://ember_support_2.dtl",
-"ember_support_3": "res://ember_support_3.dtl",
-"ember_support_4": "res://ember_support_4.dtl",
-"ember_support_5": "res://ember_support_5.dtl",
-"ember_support_6": "res://ember_support_6.dtl",
-"ember_talk_handler": "res://ember_talk_handler.dtl",
-"initial_levels": "res://initial_levels.dtl",
-"nova_bond1": "res://nova_bond1.dtl",
-"set_initial_levels_check": "res://set_initial_levels_check.dtl"
+"aaa_for_testing": "res://dialogue/aaa_for_testing.dtl",
+"ember_check_level_up": "res://dialogue/ember_check_level_up.dtl",
+"ember_level_router": "res://dialogue/ember_level_router.dtl",
+"ember_random_0": "res://dialogue/ember_random_0.dtl",
+"ember_random_1": "res://dialogue/ember_random_1.dtl",
+"ember_random_2": "res://dialogue/ember_random_2.dtl",
+"ember_random_3": "res://dialogue/ember_random_3.dtl",
+"ember_random_4": "res://dialogue/ember_random_4.dtl",
+"ember_random_5": "res://dialogue/ember_random_5.dtl",
+"ember_random_6": "res://dialogue/ember_random_6.dtl",
+"ember_support_1": "res://dialogue/ember_support_1.dtl",
+"ember_support_2": "res://dialogue/ember_support_2.dtl",
+"ember_support_3": "res://dialogue/ember_support_3.dtl",
+"ember_support_4": "res://dialogue/ember_support_4.dtl",
+"ember_support_5": "res://dialogue/ember_support_5.dtl",
+"ember_support_6": "res://dialogue/ember_support_6.dtl",
+"ember_talk_handler": "res://dialogue/ember_talk_handler.dtl",
+"initial_levels": "res://dialogue/initial_levels.dtl",
+"nova_bond1": "res://dialogue/nova_bond1.dtl",
+"set_initial_levels_check": "res://dialogue/set_initial_levels_check.dtl"
 }
 variables={
 "ember_bond_level": 0.0,
@@ -65,6 +65,42 @@ variables={
 "initial_values_set": "",
 "random_dialogue_choice": ""
 }
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+layout/style_list=[]
+layout/default_style="Default"
+glossary/default_case_sensitive=true
 
 [display]
 

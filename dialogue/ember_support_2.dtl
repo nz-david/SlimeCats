@@ -1,0 +1,16 @@
+join Ember (neutral) center
+Ember (sad): Sometimes, I get this tight feeling. Like I’m going to flare without meaning to.
+Ember (neutral): Everyone else acts like they’ve got themselves figured out.
+Ember (focused): Me? I still watch the shadows… just in case.
+- Being careful isn't a weakness–it's a strength.
+	Ember (sad): Still feels like I’m just waiting for something to go wrong.
+	set {ember_bond_points} += 2
+- Even if you flare, we're here.
+	Ember (embarrassed): ...Don't say stuff like that.
+	Ember (focused): I might believe you.
+- Then get a grip.
+	Ember (angry): Try living on a fur-trigger and see how well you grip.
+	set {ember_bond_points} -= 2
+set {ember_support_2_seen} = "true"
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/

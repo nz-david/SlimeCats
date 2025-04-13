@@ -1,0 +1,14 @@
+join Ember (neutral) center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	Ember (neutral): If you’re looking for small talk, try Nova.
+	Ember (focused): Or a wall. Same difference.
+elif {random_dialogue_choice} == 2:
+	Ember (neutral): This heat? It’s just how I breathe.
+	Ember (focused): Get used to it.
+elif {random_dialogue_choice} >= 3:
+	Ember (angry): Touch anything near my flame pit and I’ll roast your paws.
+else:
+	Ember: this means its broken
+set {ember_dialogue_happened} = "true"
+jump ember_check_level_up/
