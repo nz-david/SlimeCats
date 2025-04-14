@@ -1,0 +1,18 @@
+if {jolt_bond_points} >= 20:
+	set {jolt_bond_level} = 6
+elif {jolt_bond_points} >= 16:
+	set {jolt_bond_level} = 5
+elif {jolt_bond_points} >= 12:
+	set {jolt_bond_level} = 4
+elif {jolt_bond_points} >= 9:
+	set {jolt_bond_level} = 3
+elif {jolt_bond_points} >= 5:
+	set {jolt_bond_level} = 2
+elif {jolt_bond_points} >= 1:
+	set {jolt_bond_level} = 1
+elif {jolt_bond_points} < 1:
+	set {jolt_bond_level} = 0
+if {jolt_dialogue_happened} == "true":
+	[end_timeline]
+else:
+	jump jolt_level_router/

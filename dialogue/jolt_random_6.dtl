@@ -1,0 +1,12 @@
+join Jolt center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	Jolt: RANDOM 1
+elif {random_dialogue_choice} == 2:
+	Jolt: RANDOM 2
+elif {random_dialogue_choice} >= 3:
+	Jolt: RANDOM 3
+else:
+	Jolt: this means its broken
+set {jolt_dialogue_happened} = "true"
+jump jolt_check_level_up/

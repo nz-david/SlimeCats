@@ -1,2 +1,3 @@
 set {ember_bond_points} = 0
+set {jolt_bond_points} = 0
 set {initial_values_set} = "true"

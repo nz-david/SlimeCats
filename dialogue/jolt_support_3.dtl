@@ -1,0 +1,13 @@
+join Jolt center
+Jolt: INTRO DIALOGUE
+- OPTION 1
+	Jolt: RESPONSE 1
+	set {jolt_bond_points} += 1
+- OPTION 2
+	Jolt: RESPONSE 2
+- OPTION 3
+	Jolt: RESPONSE 3
+	set {jolt_bond_points} -= 2
+set {jolt_support_3_seen} = "true"
+set {jolt_dialogue_happened} = "true"
+jump jolt_check_level_up/

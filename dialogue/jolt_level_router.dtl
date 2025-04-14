@@ -1,0 +1,32 @@
+if {jolt_bond_level} == 0:
+	jump jolt_random_0/
+if {jolt_bond_level} == 1:
+	if {jolt_support_1_seen} == "true":
+		jump jolt_random_1/
+	else:
+		jump jolt_support_1/
+if {jolt_bond_level} == 2:
+	if {jolt_support_2_seen} == "true":
+		jump jolt_random_2/
+	else:
+		jump jolt_support_2/
+if {jolt_bond_level} == 3:
+	if {jolt_support_3_seen} == "true":
+		jump jolt_random_3/
+	else:
+		jump jolt_support_3/
+if {jolt_bond_level} == 4:
+	if {jolt_support_4_seen} == "true":
+		jump jolt_random_4/
+	else:
+		jump jolt_support_4/
+if {jolt_bond_level} == 5:
+	if {jolt_support_5_seen} == "true":
+		jump jolt_random_5/
+	else:
+		jump jolt_support_5/
+if {jolt_bond_level} == 6:
+	if {jolt_support_6_seen} == "true":
+		jump jolt_random_6/
+	else:
+		jump jolt_support_6/

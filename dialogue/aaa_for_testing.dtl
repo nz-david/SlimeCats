@@ -1,3 +1,13 @@
 This is for the sole purpose of testing things and will be deleted later. Choose a character to run through dialogue for.
 - Ember
 	jump ember_talk_handler/
+- Jolt
+	jump jolt_talk_handler/
+- Ripple
+	jump ripple_talk_handler/
+- Shade
+	jump shade_talk_handler/
+- Thorn
+	jump thorn_talk_handler/
+- Nova
+	jump nova_talk_handler/

@@ -1,0 +1,12 @@
+join Jolt center
+set {random_dialogue_choice} = range(1,3).pick_random()
+if {random_dialogue_choice} == 1:
+	Jolt (neutral light): I blinked and rewired a light fixture with my face.
+	Jolt (happy light): Productive morning!
+elif {random_dialogue_choice} >= 2:
+	Jolt (curious light): Do you hear buzzing?
+	Jolt (happy light): Wait–am I the buzzing?
+else:
+	Jolt: this means its broken
+set {jolt_dialogue_happened} = "true"
+jump jolt_check_level_up/

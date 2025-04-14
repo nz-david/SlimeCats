@@ -1,0 +1,15 @@
+join Jolt center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	Jolt (curious light): You showing up twice in a row?
+	Jolt (neutral light): That's dangerously close to trust. Just sayin'. 
+elif {random_dialogue_choice} == 2:
+	Jolt (neutral light): I get so loud so nobody notices when I go quiet.
+	Jolt (forced smile light): Funny trick, huh?
+elif {random_dialogue_choice} >= 3:
+	Jolt (forced smile light): There's a stormy feeling in my chest. 
+	Jolt (neutral light): You make it settle sometimes. 
+else:
+	Jolt: this means its broken
+set {jolt_dialogue_happened} = "true"
+jump jolt_check_level_up/

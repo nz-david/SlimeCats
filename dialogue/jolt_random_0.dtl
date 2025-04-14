@@ -1,0 +1,5 @@
+join Jolt center
+Jolt (curious light): ...Who are you again?
+
+set {jolt_dialogue_happened} = "true"
+jump jolt_check_level_up/
