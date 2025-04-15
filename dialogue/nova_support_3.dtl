@@ -1,0 +1,17 @@
+join nova center
+nova: Sometimes I write about cats who aren’t here.
+nova: Not out of grief—just... to keep the ghost company.
+
+- That’s a beautiful kind of remembrance.
+	nova: ...You always know what to say when I’m quietest.
+	set {nova_bond_points} += 2
+- Do you ever reread the old ones?
+	nova: Sometimes.
+	nova: Some of them don’t like being reread.
+
+- Seems like a waste of ink.d
+	nova: Even wasted ink leaves a mark. That counts for something.
+	set {nova_bond_points} -= 1
+set {nova_support_3_seen} = "true"
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

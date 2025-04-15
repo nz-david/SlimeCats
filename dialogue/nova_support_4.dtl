@@ -1,0 +1,15 @@
+join nova center
+nova: The big moments echo loudest. But the small ones… they hold longer.
+nova: A glance. A breath. Those are the ones I find myself writing down.
+- Maybe that’s where the real story lies.
+	nova: That’s where everything soft hides. 
+	nova: Between the lines.
+	set {nova_bond_points} += 1
+- Those are the parts we forget to remember.
+	nova: ...And sometimes, the parts worth remembering the most.
+- Why does it matter?
+	nova: Because feelings fade, but impressions linger.
+	set {nova_bond_points} -= 2
+set {nova_support_4_seen} = "true"
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

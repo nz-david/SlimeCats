@@ -1,0 +1,12 @@
+join nova center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	nova: I stopped writing the ending. I want to see what it becomes on its own.
+elif {random_dialogue_choice} == 2:
+	nova: Even the stars can’t predict us anymore. We’ve gone off-script.
+elif {random_dialogue_choice} >= 3:
+	nova: Sometimes, I reread what I wrote about you… just to make sure it really happened.
+else:
+	nova: this means its broken
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

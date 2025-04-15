@@ -1,0 +1,14 @@
+join nova center
+nova: Oh, don’t mind me–I’m just making some little scribbles on the other cats.
+nova: Drama makes the best ink. 
+- Then I hope I’m written well.
+	nova: That depends. Are you a hero, or a comedic foil?
+	set {nova_bond_points} += 1
+- You ever write about yourself?
+	nova: ...Only when no one’s reading.
+- Seems kind of invasive.
+	nova: Don’t worry—I cut out the embarrassing stuff. Probably.
+	set {nova_bond_points} -= 1
+set {nova_support_1_seen} = "true"
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

@@ -1,0 +1,15 @@
+join nova center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	nova: Did you know most stories begin by accident?
+	nova: This one's no different.
+elif {random_dialogue_choice} == 2:
+	nova: I write better when I’m not trying. You help with that somehow.
+	nova: Weird, huh?
+elif {random_dialogue_choice} >= 3:
+	nova: Everyone else acts like they’re characters in a story. 
+	nova: You? You're more like a plot twist.
+else:
+	nova: this means its broken
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

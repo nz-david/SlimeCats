@@ -1,0 +1,14 @@
+join nova center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	nova: Some lines don’t need editing. 
+	nova: Yours... usually don’t.
+elif {random_dialogue_choice} == 2:
+	nova: There’s a whole story in the way you check on the others. It’s quiet, but it’s there.
+elif {random_dialogue_choice} >= 3:
+	nova: I didn’t write today. Just listened. 
+	nova: That felt like enough.
+else:
+	nova: this means its broken
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

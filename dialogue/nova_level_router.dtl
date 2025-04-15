@@ -1,0 +1,32 @@
+if {nova_bond_level} == 0:
+	jump nova_random_0/
+if {nova_bond_level} == 1:
+	if {nova_support_1_seen} == "true":
+		jump nova_random_1/
+	else:
+		jump nova_support_1/
+if {nova_bond_level} == 2:
+	if {nova_support_2_seen} == "true":
+		jump nova_random_2/
+	else:
+		jump nova_support_2/
+if {nova_bond_level} == 3:
+	if {nova_support_3_seen} == "true":
+		jump nova_random_3/
+	else:
+		jump nova_support_3/
+if {nova_bond_level} == 4:
+	if {nova_support_4_seen} == "true":
+		jump nova_random_4/
+	else:
+		jump nova_support_4/
+if {nova_bond_level} == 5:
+	if {nova_support_5_seen} == "true":
+		jump nova_random_5/
+	else:
+		jump nova_support_5/
+if {nova_bond_level} == 6:
+	if {nova_support_6_seen} == "true":
+		jump nova_random_6/
+	else:
+		jump nova_support_6/

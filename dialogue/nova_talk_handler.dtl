@@ -1,1 +1,3 @@
-No dialogue has been implemented for Nova yet!
+set {nova_bond_points} += 1
+set {nova_dialogue_happened} = "false"
+jump nova_check_level_up/

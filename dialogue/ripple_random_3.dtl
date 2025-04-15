@@ -1,0 +1,12 @@
+join  center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	Ripple: RANDOM 1
+elif {random_dialogue_choice} == 2:
+	Ripple: RANDOM 2
+elif {random_dialogue_choice} >= 3:
+	Ripple: RANDOM 3
+else:
+	Ripple: this means its broken
+set {ripple_dialogue_happened} = "true"
+jump ripple_check_level_up/

@@ -1,0 +1,18 @@
+if {nova_bond_points} >= 20:
+	set {nova_bond_level} = 6
+elif {nova_bond_points} >= 16:
+	set {nova_bond_level} = 5
+elif {nova_bond_points} >= 12:
+	set {nova_bond_level} = 4
+elif {nova_bond_points} >= 9:
+	set {nova_bond_level} = 3
+elif {nova_bond_points} >= 5:
+	set {nova_bond_level} = 2
+elif {nova_bond_points} >= 1:
+	set {nova_bond_level} = 1
+elif {nova_bond_points} < 1:
+	set {nova_bond_level} = 0
+if {nova_dialogue_happened} == "true":
+	[end_timeline]
+else:
+	jump nova_level_router/

@@ -1,0 +1,13 @@
+join  center
+INTRO DIALOGUE
+- OPTION 1
+	Ripple: RESPONSE 1
+	set {ripple_bond_points} += 1
+- OPTION 2
+	Ripple: RESPONSE 2
+- OPTION 3
+	Ripple: RESPONSE 3
+	set {ripple_bond_points} -= 2
+set {ripple_support_1_seen} = "true"
+set {ripple_dialogue_happened} = "true"
+jump ripple_check_level_up/

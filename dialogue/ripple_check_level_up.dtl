@@ -1,0 +1,18 @@
+if {ripple_bond_points} >= 20:
+	set {ripple_bond_level} = 6
+elif {ripple_bond_points} >= 16:
+	set {ripple_bond_level} = 5
+elif {ripple_bond_points} >= 12:
+	set {ripple_bond_level} = 4
+elif {ripple_bond_points} >= 9:
+	set {ripple_bond_level} = 3
+elif {ripple_bond_points} >= 5:
+	set {ripple_bond_level} = 2
+elif {ripple_bond_points} >= 1:
+	set {ripple_bond_level} = 1
+elif {ripple_bond_points} < 1:
+	set {ripple_bond_level} = 0
+if {ripple_dialogue_happened} == "true":
+	[end_timeline]
+else:
+	jump ripple_level_router/

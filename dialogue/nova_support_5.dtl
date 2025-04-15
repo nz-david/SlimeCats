@@ -1,0 +1,19 @@
+join nova center
+nova: I didn’t plot you into this. You crashed into the draft like a loose firework.
+nova: Threw off my pacing. Broke the flow.
+nova: And somehow made everything better.
+- Then let’s write something new together.
+	nova: Guess this story’s a duet now.
+	nova: Dibs on the sparkly metaphors.
+	set {nova_bond_points} += 2
+- Stories evolve. We’re proof of that.
+	nova: Maybe I’m not the narrator anymore. 
+	nova: Maybe I’m just... part of it.
+	set {nova_bond_points} +=1
+- You should stick to telling, not feeling.
+	nova: ...Too late.
+	nova: Feelings have entered the frame.
+	set {nova_bond_points} -= 1
+set {nova_support_5_seen} = "true"
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

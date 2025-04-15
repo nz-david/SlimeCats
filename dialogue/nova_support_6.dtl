@@ -1,0 +1,15 @@
+join nova center
+nova: This might be the last chapter. Or maybe just the end of one arc. Either way…
+nova: I’m glad I’m not writing it alone anymore.
+- Whatever happens, your story’s part of mine now.
+	nova: Then let’s hope our ink holds through the storm.
+	set {nova_bond_points} += 2
+- No more margins. Just the main story.
+	nova: Then I guess it’s time to stop hiding behind narration.
+	set {nova_bond_points} += 1
+- Just don’t mess up the ending.
+	nova: We’ll write it together. Even if the ending’s still a blur.
+	set {nova_bond_points} -= 1
+set {nova_support_6_seen} = "true"
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

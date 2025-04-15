@@ -1,0 +1,32 @@
+if {ripple_bond_level} == 0:
+	jump ripple_random_0/
+if {ripple_bond_level} == 1:
+	if {ripple_support_1_seen} == "true":
+		jump ripple_random_1/
+	else:
+		jump ripple_support_1/
+if {ripple_bond_level} == 2:
+	if {ripple_support_2_seen} == "true":
+		jump ripple_random_2/
+	else:
+		jump ripple_support_2/
+if {ripple_bond_level} == 3:
+	if {ripple_support_3_seen} == "true":
+		jump ripple_random_3/
+	else:
+		jump ripple_support_3/
+if {ripple_bond_level} == 4:
+	if {ripple_support_4_seen} == "true":
+		jump ripple_random_4/
+	else:
+		jump ripple_support_4/
+if {ripple_bond_level} == 5:
+	if {ripple_support_5_seen} == "true":
+		jump ripple_random_5/
+	else:
+		jump ripple_support_5/
+if {ripple_bond_level} == 6:
+	if {ripple_support_6_seen} == "true":
+		jump ripple_random_6/
+	else:
+		jump ripple_support_6/

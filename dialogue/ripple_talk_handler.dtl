@@ -1,1 +1,3 @@
-No dialogue has been implemented for Ripple yet!
+set {ripple_bond_points} += 1
+set {ripple_dialogue_happened} = "false"
+jump ripple_check_level_up/

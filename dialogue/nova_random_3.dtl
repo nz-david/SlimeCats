@@ -1,0 +1,14 @@
+join nova center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	nova: I started writing something about you. I’m not sure what it’s becoming.
+elif {random_dialogue_choice} == 2:
+	nova: Your voice changes when you’re about to say something real.
+	nova: I like that.
+elif {random_dialogue_choice} >= 3:
+	nova: Feelings drift. But the ink still stains. 
+	nova: That's how I know they're real. 
+else:
+	nova: this means its broken
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

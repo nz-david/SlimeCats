@@ -1,0 +1,16 @@
+join nova center
+nova: Funny thing about stories–you can know exactly how it ends and still not know where to begin. I’ve started this one a dozen times.
+nova: Still doesn’t feel quite right.
+
+
+- That’s because it’s still being written.
+	nova: ...Then maybe I need to stop writing ahead.
+	set {nova_bond_points} += 1
+- Maybe someone else should start this chapter. 
+	nova: Co-writing is generally riskier. But I’m curious.
+- You're overthinking it. 
+	nova: ...Storytelling is literally my job. Let me overthink.
+	set {nova_bond_points} -= 1
+set {nova_support_2_seen} = "true"
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

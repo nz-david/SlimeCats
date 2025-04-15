@@ -1,0 +1,13 @@
+join nova center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	nova: Sometimes I write endings before beginnings. Just to see if they change.
+elif {random_dialogue_choice} == 2:
+	nova: You ever feel like your memories talk back when you reread them?
+elif {random_dialogue_choice} >= 3:
+	nova: I caught Jolt napping the other day.
+	nova: I didn’t draw it. Too sacred.
+else:
+	nova: this means its broken
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/

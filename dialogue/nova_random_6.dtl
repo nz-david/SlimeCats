@@ -1,0 +1,13 @@
+join nova center
+set {random_dialogue_choice} = range(1,4).pick_random()
+if {random_dialogue_choice} == 1:
+	nova: You changed my story. Not just the words–the rhythm.
+elif {random_dialogue_choice} == 2:
+	nova: I used to wonder who would narrate my ending.
+	nova: Now I thindk we’ll write it together.
+elif {random_dialogue_choice} >= 3:
+	nova: You’re the footnote I keep underlining–the one that turned into the main plot.
+else:
+	nova: this means its broken
+set {nova_dialogue_happened} = "true"
+jump nova_check_level_up/
