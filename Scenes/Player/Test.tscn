@@ -26,6 +26,13 @@ offset_right = 1049.0
 offset_bottom = 1318.0
 color = Color(0.171375, 0.362532, 0.191303, 1)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="ColorRect"]
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ColorRect/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(1446, 282, 293, 284, 303, 920, 1474, 933)
+
 [node name="TestCat" parent="." instance=ExtResource("1_qtrwu")]
 unique_name_in_owner = true
 
