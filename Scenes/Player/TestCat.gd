@@ -1,9 +1,28 @@
 extends CharacterBody2D
 
+var characterMap = {
+	"ember": {
+		"color1": load("res://Scenes/Player/red.tres"),
+		"color2": load("res://Scenes/Player/ourple.tres"),
+		"color3": load("res://Scenes/Player/geen.tres"),
+	},
+	"ripple": {
+		"color1": load("res://Scenes/Player/ourple.tres"),
+		"color2": load("res://Scenes/Player/geen.tres"),
+		"color3": load("res://Scenes/Player/red.tres"),
+		}
+}
 
+func changeCharacter(characterName):
+	var characterColors = characterMap[characterName]
+	$AnimatedSprite2D.material.set_shader_parameter("pal0", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal1", characterColors.color2)
+	$AnimatedSprite2D.material.set_shader_parameter("pal2", characterColors.color3)
 
+	
 var MaxHealth = 3
-
+var currentCharacter = 0
+var Characters = ["ember", "ripple"]
 enum CatAngle {NORTH, NORTHEAST, NORTHWEST, SOUTH, SOUTHEAST, SOUTHWEST, WEST, EAST}
 var cat_angle = CatAngle.NORTH
 enum PlayerState {IDLE, MOVING, ATTACK}
@@ -49,6 +68,13 @@ func _physics_process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://gameover.tscn")
 	
 	animate_based_on_input_controls()
+	
+	var cat_change:= Input.is_action_just_pressed("catchange")
+	if cat_change:
+		currentCharacter += 1
+		if(currentCharacter>=len(Characters)):
+			currentCharacter=0
+		changeCharacter(Characters[currentCharacter])
 
 	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
 	if player_state == PlayerState.MOVING or player_state == PlayerState.IDLE:
