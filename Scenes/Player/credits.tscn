@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://clp0dgfkgflw2"]
+
+[ext_resource type="AudioStream" uid="uid://dd76ew3uf3rki" path="res://Assets/Music/2025-04-07 clover slime cats credits v1.wav" id="1_vddlh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_vddlh")
+autoplay = true
