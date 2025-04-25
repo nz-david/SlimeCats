@@ -3,6 +3,10 @@ shader_type canvas_item;
 uniform sampler2D pal0 : hint_default_black;
 uniform sampler2D pal1 : hint_default_black;
 uniform sampler2D pal2 : hint_default_black;
+uniform sampler2D pal3 : hint_default_black;
+uniform sampler2D pal4 : hint_default_black;
+uniform sampler2D pal5 : hint_default_black;
+uniform sampler2D pal6 : hint_default_black;
 
 uniform float lerper: hint_range(0.0, 1.0);
 
@@ -49,9 +53,8 @@ void fragment() {
 	float l2 = max(min(lerper*2.0-1.0, 1.0), 0.0);
 	
 	
-	vec4 mixture1 = mix(colorP0, colorP1, l1);
-	vec4 mixture2 = mix(mixture1, colorP2, l2);
+	vec4 final_color = colorP0*(step(0.0, lerper)-step(1, lerper))+ colorP1*(step(1, lerper)- step(2, lerper));
 	// Blend between your two color maps and...   Profit.
 	
-	COLOR = vec4(mixture2.rgb, COLOR.w);
+	COLOR = vec4(final_color.rgb, COLOR.w);
 }
