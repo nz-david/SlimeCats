@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://7wb18i6hgf"]
+[gd_scene load_steps=113 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
@@ -6,13 +6,17 @@
 [ext_resource type="Shader" path="res://Scenes/Player/color_remap.gdshader" id="3_uw53i"]
 [ext_resource type="Texture2D" uid="uid://bkfptuq2j68y4" path="res://Assets/Images/Final Sprite Sheets/34back.png" id="4_iedx8"]
 [ext_resource type="Texture2D" uid="uid://bs23f4087n68m" path="res://Scenes/Player/red.tres" id="4_t2gqu"]
-[ext_resource type="Texture2D" uid="uid://bl2up6o25o7f1" path="res://Scenes/Player/ourple.tres" id="5_k6wm8"]
+[ext_resource type="Texture2D" uid="uid://bnyfmfnpxuluk" path="res://Scenes/Player/bluu.tres" id="5_m82su"]
 [ext_resource type="Texture2D" uid="uid://c3idcf7764k2t" path="res://Assets/Images/Final Sprite Sheets/34front.png" id="6_a534j"]
 [ext_resource type="Texture2D" uid="uid://dlcu75hpamq7q" path="res://Scenes/Player/geen.tres" id="6_jn30p"]
 [ext_resource type="Texture2D" uid="uid://g7r13ujbl3ap" path="res://Assets/Images/catapult front side sprite sheet.png" id="6_v2spl"]
+[ext_resource type="Texture2D" uid="uid://clple6iihx7cj" path="res://Scenes/Player/yellow.tres" id="7_0msfw"]
 [ext_resource type="Texture2D" uid="uid://d1t55gbqtaxh2" path="res://Assets/Images/Final Sprite Sheets/back.png" id="7_m6squ"]
+[ext_resource type="Texture2D" uid="uid://bbukvnwmp6s4m" path="res://Scenes/Player/lightgrey.tres" id="8_8e7g3"]
 [ext_resource type="Texture2D" uid="uid://bxbaq21ft2xbn" path="res://Assets/Images/Final Sprite Sheets/front.png" id="8_ywsar"]
 [ext_resource type="Texture2D" uid="uid://d7ik3nj6uuku" path="res://Assets/Images/Final Sprite Sheets/side.png" id="9_rx1fc"]
+[ext_resource type="Texture2D" uid="uid://bwv1fjd8jbc03" path="res://Scenes/Player/lightblue.tres" id="9_vfj7c"]
+[ext_resource type="Texture2D" uid="uid://dnloa6kgh38py" path="res://Scenes/Player/darkgrey.tres" id="10_ruxmu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23h1d"]
 radius = 0.5
@@ -32,8 +36,12 @@ height = 84.0
 shader = ExtResource("3_uw53i")
 shader_parameter/lerper = 0.0
 shader_parameter/pal0 = ExtResource("4_t2gqu")
-shader_parameter/pal1 = ExtResource("5_k6wm8")
+shader_parameter/pal1 = ExtResource("5_m82su")
 shader_parameter/pal2 = ExtResource("6_jn30p")
+shader_parameter/pal3 = ExtResource("7_0msfw")
+shader_parameter/pal4 = ExtResource("8_8e7g3")
+shader_parameter/pal5 = ExtResource("9_vfj7c")
+shader_parameter/pal6 = ExtResource("10_ruxmu")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qhws"]
 atlas = ExtResource("3_68ji2")

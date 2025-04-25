@@ -1,13 +1,38 @@
 extends CharacterBody2D
 
 var characterMap = {
-	"ember": {
+	"fire": {
 		"color1": load("res://Scenes/Player/red.tres"),
 		"color2": load("res://Scenes/Player/ourple.tres"),
 		"color3": load("res://Scenes/Player/geen.tres"),
 	},
-	"ripple": {
-		"color1": load("res://Scenes/Player/ourple.tres"),
+	"water": {
+		"color1": load("res://Scenes/Player/bluu.tres"),
+		"color2": load("res://Scenes/Player/geen.tres"),
+		"color3": load("res://Scenes/Player/red.tres"),
+		},
+	"nature": {
+		"color1": load("res://Scenes/Player/geen.tres"),
+		"color2": load("res://Scenes/Player/bluu.tres"),
+		"color3": load("res://Scenes/Player/red.tres"),
+		},
+	"light": {
+		"color1": load("res://Scenes/Player/yellow.tres"),
+		"color2": load("res://Scenes/Player/geen.tres"),
+		"color3": load("res://Scenes/Player/red.tres"),
+		},
+	"grey": {
+		"color1": load("res://Scenes/Player/lightgrey.tres"),
+		"color2": load("res://Scenes/Player/geen.tres"),
+		"color3": load("res://Scenes/Player/red.tres"),
+		},
+	"ice": {
+		"color1": load("res://Scenes/Player/lightblue.tres"),
+		"color2": load("res://Scenes/Player/geen.tres"),
+		"color3": load("res://Scenes/Player/red.tres"),
+		},
+	"dark": {
+		"color1": load("res://Scenes/Player/darkgrey.tres"),
 		"color2": load("res://Scenes/Player/geen.tres"),
 		"color3": load("res://Scenes/Player/red.tres"),
 		}
@@ -16,13 +41,17 @@ var characterMap = {
 func changeCharacter(characterName):
 	var characterColors = characterMap[characterName]
 	$AnimatedSprite2D.material.set_shader_parameter("pal0", characterColors.color1)
-	$AnimatedSprite2D.material.set_shader_parameter("pal1", characterColors.color2)
-	$AnimatedSprite2D.material.set_shader_parameter("pal2", characterColors.color3)
+	$AnimatedSprite2D.material.set_shader_parameter("pal1", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal2", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal3", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal4", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal5", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal6", characterColors.color1)
 
 	
 var MaxHealth = 3
 var currentCharacter = 0
-var Characters = ["ember", "ripple"]
+var Characters = ["fire", "water", "ice", "grey", "nature", "dark"]
 enum CatAngle {NORTH, NORTHEAST, NORTHWEST, SOUTH, SOUTHEAST, SOUTHWEST, WEST, EAST}
 var cat_angle = CatAngle.NORTH
 enum PlayerState {IDLE, MOVING, ATTACK}
