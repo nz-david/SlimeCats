@@ -45,9 +45,9 @@ func _physics_process(delta: float) -> void:
 				other.damage()
 				main.enemyexisting -= 1
 				queue_free()
-			if(other.is_in_group("Player_Melee")):
-				other.damage()
-				main.enemyexisting -= 1
+			#if(other.is_in_group("Player_Melee")):
+				#other.damage()
+				#main.enemyexisting -= 1
 	# Gets den position
 	#den_pos = den.position
 	# Get the difference of the den's position and the enemy's position

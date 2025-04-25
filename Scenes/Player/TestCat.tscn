@@ -1,8 +1,9 @@
-[gd_scene load_steps=109 format=3 uid="uid://7wb18i6hgf"]
+[gd_scene load_steps=110 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
 [ext_resource type="Texture2D" uid="uid://feqws30pn7gm" path="res://Assets/Images/catapult back sprite sheet.png" id="3_68ji2"]
+[ext_resource type="Script" path="res://Scenes/Player/hit_box.gd" id="3_ch37d"]
 [ext_resource type="Shader" path="res://Scenes/Player/color_remap.gdshader" id="3_uw53i"]
 [ext_resource type="Texture2D" uid="uid://bkfptuq2j68y4" path="res://Assets/Images/Final Sprite Sheets/34back.png" id="4_iedx8"]
 [ext_resource type="Texture2D" uid="uid://bs23f4087n68m" path="res://Scenes/Player/red.tres" id="4_t2gqu"]
@@ -769,15 +770,64 @@ script = ExtResource("2_fjywb")
 [node name="Hurt_Box" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_Box"]
+visible = false
 position = Vector2(0, 22)
 scale = Vector2(82, 82)
 shape = SubResource("CapsuleShape2D_peaub")
 
 [node name="Hit_Box" type="Area2D" parent="." groups=["Player_Melee"]]
+script = ExtResource("3_ch37d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_Box"]
+[node name="NorthCollision" type="CollisionShape2D" parent="Hit_Box"]
 position = Vector2(1, -81)
 rotation = 1.5708
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="NorthEastCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(64.67, -50.64)
+rotation = 2.53073
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="SouthCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(2, 125)
+rotation = 1.5708
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="SouthEastCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(63, 94)
+rotation = 0.624828
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="EastCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(81, 20)
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="WestCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(-81, 23)
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="SouthWestCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(-63, 96)
+rotation = 2.35619
+scale = Vector2(1.63, 1.63)
+shape = SubResource("CapsuleShape2D_3jc6m")
+disabled = true
+
+[node name="NorthWestCollision" type="CollisionShape2D" parent="Hit_Box"]
+position = Vector2(-61, -48)
+rotation = 0.624828
 scale = Vector2(1.63, 1.63)
 shape = SubResource("CapsuleShape2D_3jc6m")
 disabled = true
@@ -792,12 +842,14 @@ one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_rn2ge")
-position = Vector2(-1, -0.999998)
+position = Vector2(7, -1)
 rotation = 6.28319
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_w60i8")
-animation = &"3_4 view forward run"
+animation = &"side view idle"
 
 [connection signal="area_entered" from="Hurt_Box" to="." method="_on_hurt_box_area_entered"]
+[connection signal="area_entered" from="Hit_Box" to="Hit_Box" method="_on_area_entered"]
+[connection signal="body_entered" from="Hit_Box" to="Hit_Box" method="_on_body_entered"]
 [connection signal="timeout" from="Melee_Timer" to="." method="_on_melee_timer_timeout"]
 [connection signal="timeout" from="Hurt_Timer" to="." method="_on_hurt_timer_timeout"]

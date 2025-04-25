@@ -35,7 +35,7 @@ var being_attacked = false
 @onready var cat_run = $AnimatedSprite2D
 
 @onready var hurt_timer = $Hurt_Timer
-@onready var hit_box = $Hit_Box/CollisionShape2D
+#@onready var hit_box = $Hit_Box/CollisionShape2D
 @onready var melee_timer = $Melee_Timer
 @onready var hurt_box = $Hurt_Box/CollisionShape2D
 @export var Health = MaxHealth
@@ -91,7 +91,15 @@ func _physics_process(delta: float) -> void:
 
 
 	if Input.is_action_pressed("melee") and not is_attacking:
-		hit_box.disabled = false
+		match cat_angle:
+			CatAngle.NORTH: $Hit_Box/NorthCollision.disabled = false
+			CatAngle.SOUTH: $Hit_Box/SouthCollision.disabled = false
+			CatAngle.NORTHEAST: $Hit_Box/NorthEastCollision.disabled = false
+			CatAngle.WEST: $Hit_Box/WestCollision.disabled = false
+			CatAngle.SOUTHWEST: $Hit_Box/SouthWestCollision.disabled = false
+			CatAngle.NORTHWEST: $Hit_Box/NorthWestCollision.disabled = false
+			CatAngle.SOUTHEAST: $Hit_Box/SouthEastCollision.disabled = false
+			CatAngle.EAST: $Hit_Box/EastCollision.disabled = false
 		melee_timer.start()
 		is_attacking = true
 #func on_Hurt_Box_entered(area):
@@ -173,5 +181,12 @@ func _on_hurt_timer_timeout() -> void:
 
 
 func _on_melee_timer_timeout() -> void:
-	hit_box.disabled = true
+	$Hit_Box/NorthCollision.disabled = true
+	$Hit_Box/SouthCollision.disabled = true
+	$Hit_Box/NorthEastCollision.disabled = true
+	$Hit_Box/WestCollision.disabled = true
+	$Hit_Box/SouthEastCollision.disabled = true
+	$Hit_Box/NorthWestCollision.disabled = true
+	$Hit_Box/EastCollision.disabled = true
+	$Hit_Box/SouthWestCollision.disabled = true
 	is_attacking = false

@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	
 	if collision:
 		print("Has Entered :3")
-		var other =collision.get_collider()
+		var other = collision.get_collider()
 		print(other.get_class())
 		if(other.is_in_group("Enemies")):
 			other.damage()
