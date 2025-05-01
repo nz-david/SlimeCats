@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=113 format=3 uid="uid://7wb18i6hgf"]
-
+[gd_scene load_steps=114 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]

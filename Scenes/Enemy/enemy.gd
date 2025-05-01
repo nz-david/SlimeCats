@@ -23,6 +23,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Health <= 0:
 		main.enemyexisting -= 1
+		main.enemydefeated += 1
 		queue_free()
 	
 	den_pos = den.position
@@ -44,6 +45,7 @@ func _physics_process(delta: float) -> void:
 			if(other.is_in_group("den")):
 				other.damage()
 				main.enemyexisting -= 1
+				main.enemydefeated += 1
 				queue_free()
 			#if(other.is_in_group("Player_Melee")):
 				#other.damage()
