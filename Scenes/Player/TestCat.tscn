@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://7wb18i6hgf"]
+[gd_scene load_steps=115 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
@@ -24,6 +24,8 @@ radius = 0.5
 height = 1.56
 
 [sub_resource type="SphereMesh" id="SphereMesh_lu5qj"]
+
+[sub_resource type="Theme" id="Theme_la4jn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_peaub"]
 radius = 0.5
@@ -768,6 +770,7 @@ offset_left = -25.0
 offset_top = -96.0
 offset_right = 26.0
 offset_bottom = -13.0
+theme = SubResource("Theme_la4jn")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = ":3"
