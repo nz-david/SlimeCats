@@ -10,7 +10,7 @@ var range = 300
 @onready var den
 @onready var Health = MaxHealth
 @onready var player
-
+@export var health_scene: PackedScene
 
 func _ready() -> void:
 
@@ -67,3 +67,8 @@ func _physics_process(delta: float) -> void:
 func damage():
 	Health -= 1
 	print("Owch")
+	if Health <= 0:
+		var health = health_scene.instantiate()
+		get_parent().add_child(health)
+		health.position = position
+		print("spawn health")

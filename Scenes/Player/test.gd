@@ -21,9 +21,10 @@ func _ready() -> void:
 
 #Progresses to next wave after "4" enemies have been defeated
 func _process(delta: float) -> void:
-	if enemydefeated >= 4:
+	if enemydefeated >= 5:
 		enemydefeated = 0
 		wave += 1
+	
 
 
 func _on_timer_timeout() -> void:
