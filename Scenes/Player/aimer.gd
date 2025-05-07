@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 		var player = $"."
 		TestProjectile.global_position = player.global_position
 		TestProjectile.global_rotation = player.global_rotation + (5 * PI)
+		$"../AudioStreamPlayer2D".playing = true
 		
 		capacity = capacity - 1
 		st = 0

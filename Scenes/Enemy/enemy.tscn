@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpqwuwlce0ikj"]
+[gd_scene load_steps=6 format=3 uid="uid://dpqwuwlce0ikj"]
 
 [ext_resource type="Script" path="res://Scenes/Enemy/enemy.gd" id="1_jq74k"]
 [ext_resource type="Texture2D" uid="uid://txksx5xcisla" path="res://Assets/Images/icon.svg" id="2_41abq"]
 [ext_resource type="PackedScene" uid="uid://cnpllfhf8tqtw" path="res://Scenes/Items/health.tscn" id="2_ts6tu"]
+[ext_resource type="AudioStream" uid="uid://b7vikqxwpjfys" path="res://Enemykilled.wav" id="4_g5mlw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auyfp"]
 size = Vector2(47.5, 48.5)
@@ -25,3 +26,6 @@ texture = ExtResource("2_41abq")
 [node name="Hit_Box" type="CollisionShape2D" parent="Area2D" groups=["Enemies"]]
 position = Vector2(14.25, 14.75)
 shape = SubResource("RectangleShape2D_auyfp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_g5mlw")
