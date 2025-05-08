@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://d7ik3nj6uuku" path="res://Assets/Images/Final Sprite Sheets/side.png" id="9_rx1fc"]
 [ext_resource type="Texture2D" uid="uid://bwv1fjd8jbc03" path="res://Scenes/Player/lightblue.tres" id="9_vfj7c"]
 [ext_resource type="Texture2D" uid="uid://dnloa6kgh38py" path="res://Scenes/Player/darkgrey.tres" id="10_ruxmu"]
-[ext_resource type="AudioStream" uid="uid://ihtob32c74dj" path="res://pewpew.wav" id="19_4giht"]
+[ext_resource type="AudioStream" uid="uid://ihtob32c74dj" path="res://Assets/Sound/pewpew.wav" id="19_4giht"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23h1d"]
 radius = 0.5

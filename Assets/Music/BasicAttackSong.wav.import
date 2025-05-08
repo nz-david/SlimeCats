@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://brv371nejagar"
-path="res://.godot/imported/BasicAttackSong.wav-44d17efa06f5cd1ed75c4c71336408a1.sample"
+path="res://.godot/imported/BasicAttackSong.wav-9e28366ab690d8bc2ecbb84e02ee5c85.sample"
 
 [deps]
 
-source_file="res://BasicAttackSong.wav"
-dest_files=["res://.godot/imported/BasicAttackSong.wav-44d17efa06f5cd1ed75c4c71336408a1.sample"]
+source_file="res://Assets/Music/BasicAttackSong.wav"
+dest_files=["res://.godot/imported/BasicAttackSong.wav-9e28366ab690d8bc2ecbb84e02ee5c85.sample"]
 
 [params]
 
