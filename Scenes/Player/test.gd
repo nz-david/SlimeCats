@@ -26,6 +26,8 @@ func _process(delta: float) -> void:
 		wave += 1
 	
 
+func OnKilled():
+	$AudioStreamPlayer2D2.play()
 
 func _on_timer_timeout() -> void:
 	if(enemyammount > 0 and enemyexisting <= 4):

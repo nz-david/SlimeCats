@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://btx4jvarrrjcq"]
+
+[ext_resource type="Script" path="res://Scenes/Player/test_projectile_2.gd" id="1_ajray"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y5dle"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2d5v"]
+radius = 51.0
+height = 102.0
+
+[node name="TestProjectile2" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_ajray")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+rotation = 1.5708
+scale = Vector2(27.5, 50)
+mesh = SubResource("CapsuleMesh_y5dle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.3)
+shape = SubResource("CapsuleShape2D_i2d5v")

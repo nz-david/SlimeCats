@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var base_health = 10
+var base_health = 1500
 var health
 
 @onready var sprite = $Sprite2D

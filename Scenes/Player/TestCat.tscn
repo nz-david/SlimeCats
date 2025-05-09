@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://7wb18i6hgf"]
+[gd_scene load_steps=116 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://d7ik3nj6uuku" path="res://Assets/Images/Final Sprite Sheets/side.png" id="9_rx1fc"]
 [ext_resource type="Texture2D" uid="uid://bwv1fjd8jbc03" path="res://Scenes/Player/lightblue.tres" id="9_vfj7c"]
 [ext_resource type="Texture2D" uid="uid://dnloa6kgh38py" path="res://Scenes/Player/darkgrey.tres" id="10_ruxmu"]
+[ext_resource type="AudioStream" uid="uid://ihtob32c74dj" path="res://Assets/Sound/pewpew.wav" id="19_4giht"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23h1d"]
 radius = 0.5
@@ -858,6 +859,10 @@ rotation = 6.28319
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_w60i8")
 animation = &"side view idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_4giht")
+volume_db = 7.579
 
 [connection signal="area_entered" from="Hurt_Box" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="Hit_Box" to="Hit_Box" method="_on_area_entered"]
