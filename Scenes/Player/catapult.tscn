@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdlgib3phy7td"]
+
+[ext_resource type="Script" path="res://Scenes/Player/catapult.gd" id="1_ujpnu"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vq3wf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rm1um"]
+radius = 0.5004
+
+[node name="Catapult" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_ujpnu")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(50, 50)
+mesh = SubResource("SphereMesh_vq3wf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(50, 50)
+shape = SubResource("CircleShape2D_rm1um")
