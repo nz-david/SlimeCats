@@ -2,16 +2,19 @@ extends Node2D
 
 var sps := 25.0
 var st := 0.0
-var sps2 := 12.5
+var sps2 := 12
 var st2 := 0.0
-var sps3 := 12.5
+var sps3 := 5
 var st3 := 0.0
+var sps4 := 12
+var st4 := 0.0
 var capacity = 10.0
 var avail = true
 
 @onready var scene = load("res://Scenes/Player/TestProjectile.tscn")
 @onready var scene2 = load("res://Scenes/Player/test_projectile_2.tscn")
 @onready var scene3 = load("res://Scenes/Player/slime_spill.tscn")
+@onready var scene4 = load("res://Scenes/Player/catapult.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,12 +29,12 @@ func _process(delta: float) -> void:
 	st += delta
 	var ste := st>(4/sps)
 	if Input.is_action_pressed("pew") and ste and avail and can_attack.can_attack:
-		var TestProjectile = scene.instantiate()
+		var Primary = scene.instantiate()
 		
-		get_tree().get_root().get_node("Test").add_child(TestProjectile)
+		get_tree().get_root().get_node("Test").add_child(Primary)
 		var player = $"."
-		TestProjectile.global_position = player.global_position
-		TestProjectile.global_rotation = player.global_rotation + (5 * PI)
+		Primary.global_position = player.global_position
+		Primary.global_rotation = player.global_rotation + (5 * PI)
 		$"../AudioStreamPlayer2D".play()
 		
 		capacity = capacity - 1
@@ -39,12 +42,12 @@ func _process(delta: float) -> void:
 	st2 += delta
 	var ste2 := st2>(4/sps2)
 	if Input.is_action_pressed("Secondary Pew") and ste and avail and can_attack.can_attack:
-		var TestProjectile2 = scene2.instantiate()
+		var Secondary = scene2.instantiate()
 		
-		get_tree().get_root().get_node("Test").add_child(TestProjectile2)
+		get_tree().get_root().get_node("Test").add_child(Secondary)
 		var player = $"."
-		TestProjectile2.global_position = player.global_position
-		TestProjectile2.global_rotation = player.global_rotation + (5 * PI)
+		Secondary.global_position = player.global_position
+		Secondary.global_rotation = player.global_rotation + (5 * PI)
 		$"../AudioStreamPlayer2D".play()
 		
 		capacity = capacity - 2
@@ -52,13 +55,27 @@ func _process(delta: float) -> void:
 	st3 += delta
 	var ste3 := st3>(4/sps3)
 	if Input.is_action_pressed("SlimeSpill") and ste and avail and can_attack.can_attack:
-		var TestProjectile3 = scene3.instantiate()
+		var SlimeSpill = scene3.instantiate()
 		
-		get_tree().get_root().get_node("Test").add_child(TestProjectile3)
+		get_tree().get_root().get_node("Test").add_child(SlimeSpill)
 		var player = $"."
-		TestProjectile3.global_position = player.global_position
+		SlimeSpill.global_position = player.global_position
+		SlimeSpill.z_index = -1
 		
 		capacity = capacity - 5
+		st = 0
+	st4 += delta
+	var ste4 := st4>(4/sps4)
+	if Input.is_action_pressed("catapult") and ste and avail and can_attack.can_attack:
+		var catapult = scene4.instantiate()
+		
+		get_tree().get_root().get_node("Test").add_child(catapult)
+		var player = $"."
+		catapult.global_position = player.global_position
+		catapult.global_rotation = player.global_rotation + (5 * PI)
+		$"../AudioStreamPlayer2D".play()
+		
+		capacity = capacity - 8
 		st = 0
 	if((capacity <= 0) and avail):
 		avail = false

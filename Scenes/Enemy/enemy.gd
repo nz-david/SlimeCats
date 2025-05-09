@@ -50,6 +50,9 @@ func _physics_process(delta: float) -> void:
 				main.OnKilled()
 				queue_free()
 			elif(other.is_in_group("Player_Projectiles")):
+				main.enemyexisting -= 1
+				main.enemydefeated += 1
+				main.OnKilled()
 				queue_free()
 				#this is not a good solution for non 1 shot enemies but i dont care
 			#if(other.is_in_group("Player_Melee")):
