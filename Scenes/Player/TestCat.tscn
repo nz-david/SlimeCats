@@ -750,8 +750,8 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Friends"]]
 position = Vector2(41, 42)
-collision_layer = 4
-collision_mask = 4
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_ocf2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,17 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnpllfhf8tqtw"]
+[gd_scene load_steps=5 format=3 uid="uid://cnpllfhf8tqtw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbady"]
+[ext_resource type="Script" path="res://Scenes/Items/health.gd" id="1_gi80t"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_co5uf"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbady"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxq70"]
+radius = 15.0333
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_cbady")
+[node name="Node2D" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_gi80t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 4.76837e-07)
 scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_co5uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cbady")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dxq70")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

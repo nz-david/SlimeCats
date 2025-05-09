@@ -219,3 +219,5 @@ func _on_melee_timer_timeout() -> void:
 	$Hit_Box/EastCollision.disabled = true
 	$Hit_Box/SouthWestCollision.disabled = true
 	is_attacking = false
+func heal():
+	Health+=1
