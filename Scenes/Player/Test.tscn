@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cniq2hvup4upo"]
+[gd_scene load_steps=17 format=4 uid="uid://cniq2hvup4upo"]
 
 [ext_resource type="Script" path="res://Scenes/Player/test.gd" id="1_pl7uy"]
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="1_qtrwu"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/label_2.gd" id="8_dai2w"]
 [ext_resource type="AudioStream" uid="uid://brv371nejagar" path="res://Assets/Music/BasicAttackSong.wav" id="10_43ek3"]
 [ext_resource type="AudioStream" uid="uid://b7vikqxwpjfys" path="res://Assets/Sound/Enemykilled.wav" id="11_swipv"]
+[ext_resource type="PackedScene" uid="uid://b88ajlewoyj1g" path="res://pause_menu.tscn" id="13_2exes"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akg61"]
 texture = ExtResource("3_8t7m3")
@@ -31,6 +32,13 @@ point_count = 6
 [node name="Test" type="Node2D"]
 script = ExtResource("1_pl7uy")
 enemy_scene = ExtResource("3_nk5ov")
+
+[node name="Pause_menu" parent="." instance=ExtResource("13_2exes")]
+modulate = Color(1, 1, 1, 1)
+offset_left = -1821.0
+offset_top = 384.0
+offset_right = -1821.0
+offset_bottom = 384.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -2
