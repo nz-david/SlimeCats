@@ -63,6 +63,7 @@ script = ExtResource("4_mxdtv")
 
 [node name="TestCat" parent="." instance=ExtResource("1_qtrwu")]
 unique_name_in_owner = true
+position = Vector2(-3, 179)
 
 [node name="Den" parent="." instance=ExtResource("2_7000r")]
 unique_name_in_owner = true
