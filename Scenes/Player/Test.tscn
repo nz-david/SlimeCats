@@ -34,7 +34,6 @@ script = ExtResource("1_pl7uy")
 enemy_scene = ExtResource("3_nk5ov")
 
 [node name="Pause_menu" parent="." instance=ExtResource("13_2exes")]
-modulate = Color(1, 1, 1, 1)
 offset_left = -1821.0
 offset_top = 384.0
 offset_right = -1821.0
