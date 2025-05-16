@@ -779,9 +779,9 @@ text = ":3"
 [node name="Aimer" type="Node2D" parent="."]
 script = ExtResource("2_fjywb")
 
-[node name="Hurt_Box" type="Area2D" parent="."]
+[node name="Hurt_Box" type="Area2D" parent="." groups=["Friends"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_Box"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_Box" groups=["Friends"]]
 visible = false
 position = Vector2(0, 22)
 scale = Vector2(82, 82)
