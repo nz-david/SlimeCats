@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var base_health = 1500
+var base_health = 15
 var health
 var open = false
 var has_opened = false

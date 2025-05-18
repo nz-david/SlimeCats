@@ -140,7 +140,7 @@ unique_name_in_owner = true
 stream = ExtResource("11_swipv")
 volume_db = -13.6
 
-[node name="Pause_menu" parent="." instance=ExtResource("13_2exes")]
+[node name="Pause_menu2" parent="." instance=ExtResource("13_2exes")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0

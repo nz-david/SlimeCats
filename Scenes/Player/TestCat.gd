@@ -42,7 +42,7 @@ func changeCharacter(characterName):
 	var characterColors = characterMap[characterName]
 	$AnimatedSprite2D.material.set_shader_parameter("pal0", characterColors.color1)
 	$AnimatedSprite2D.material.set_shader_parameter("pal1", characterColors.color1)
-	$AnimatedssssaddddddSprite2D.material.set_shader_parameter("pal2", characterColors.color1)
+	$AnimatedSprite2D.material.set_shader_parameter("pal2", characterColors.color1)
 	$AnimatedSprite2D.material.set_shader_parameter("pal3", characterColors.color1)
 	$AnimatedSprite2D.material.set_shader_parameter("pal4", characterColors.color1)
 	$AnimatedSprite2D.material.set_shader_parameter("pal5", characterColors.color1)
