@@ -10,6 +10,7 @@ var sps4 := 12
 var st4 := 0.0
 var capacity = 10.0
 var avail = true
+var slimespillammount = 0
 
 @onready var scene = load("res://Scenes/Player/TestProjectile.tscn")
 @onready var scene2 = load("res://Scenes/Player/test_projectile_2.tscn")
@@ -54,7 +55,7 @@ func _process(delta: float) -> void:
 		st = 0
 	st3 += delta
 	var ste3 := st3>(4/sps3)
-	if Input.is_action_pressed("SlimeSpill") and ste and avail and can_attack.can_attack:
+	if Input.is_action_pressed("SlimeSpill") and ste and avail and can_attack.can_attack and slimespillammount <= 1:
 		var SlimeSpill = scene3.instantiate()
 		
 		get_tree().get_root().get_node("Test").add_child(SlimeSpill)
@@ -62,6 +63,8 @@ func _process(delta: float) -> void:
 		SlimeSpill.global_position = player.global_position
 		SlimeSpill.z_index = -1
 		
+		slimespillammount += 1
+		slimespilllimit()
 		capacity = capacity - 5
 		st = 0
 	st4 += delta
@@ -92,3 +95,9 @@ func _process(delta: float) -> void:
 func reload():
 	avail = true
 	capacity = 10
+	
+func slimespilllimit():
+	get_tree().create_timer(15).timeout.connect(increaseslimespillammount)
+
+func increaseslimespillammount():
+	slimespillammount -= 1

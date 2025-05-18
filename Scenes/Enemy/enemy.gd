@@ -32,9 +32,10 @@ func _physics_process(delta: float) -> void:
 	
 	if(d.length() < range):
 		velocity = (player.position - position).normalized() * speed
-		#print("In Range")
+		$AnimatedSprite2D.frame = 1
 	else:
 		velocity = (den.position - position).normalized() * speed
+		$AnimatedSprite2D.frame = 0
 	
 	var collided = move_and_slide()
 	

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://uq535ics0qbd" path="res://Assets/Images/pool animation.png" id="5_euka7"]
 [ext_resource type="Script" path="res://button.gd" id="7_kgt6k"]
 [ext_resource type="Texture2D" uid="uid://bn7swiavqnqen" path="res://Assets/Images/ember/ember bond 1.png" id="8_sphhc"]
-[ext_resource type="AudioStream" uid="uid://ctdjew1i4k1b2" path="res://den_tune.tres" id="8_ty40e"]
+[ext_resource type="AudioStream" path="res://den_tune.tres" id="8_ty40e"]
 [ext_resource type="Script" path="res://button_2.gd" id="9_jtlvw"]
 [ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="9_qy76s"]
 [ext_resource type="Texture2D" uid="uid://c5pliqvlad8r6" path="res://Assets/Images/den.PNG" id="14_bcfjy"]
