@@ -91,6 +91,10 @@ func _ready() -> void:
 	print("meow")
 	
 
+func play_melee_animation(hit_box):
+	$Hit_Box/BurstAnimation.position = hit_box.position
+	$Hit_Box/BurstAnimation.visible = true
+	$Hit_Box/BurstAnimation.play()
 
 func _physics_process(delta: float) -> void:
 	if Health <= 0:
@@ -116,19 +120,33 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.y = 0
 	move_and_slide()
-	
-
 
 	if Input.is_action_pressed("melee") and not is_attacking:
 		match cat_angle:
-			CatAngle.NORTH: $Hit_Box/NorthCollision.disabled = false
-			CatAngle.SOUTH: $Hit_Box/SouthCollision.disabled = false
-			CatAngle.NORTHEAST: $Hit_Box/NorthEastCollision.disabled = false
-			CatAngle.WEST: $Hit_Box/WestCollision.disabled = false
-			CatAngle.SOUTHWEST: $Hit_Box/SouthWestCollision.disabled = false
-			CatAngle.NORTHWEST: $Hit_Box/NorthWestCollision.disabled = false
-			CatAngle.SOUTHEAST: $Hit_Box/SouthEastCollision.disabled = false
-			CatAngle.EAST: $Hit_Box/EastCollision.disabled = false
+			CatAngle.NORTH: 
+				$Hit_Box/NorthCollision.disabled = false
+				play_melee_animation($Hit_Box/NorthCollision)
+			CatAngle.SOUTH: 
+				$Hit_Box/SouthCollision.disabled = false
+				play_melee_animation($Hit_Box/SouthCollision)
+			CatAngle.NORTHEAST: 
+				$Hit_Box/NorthEastCollision.disabled = false
+				play_melee_animation($Hit_Box/NorthEastCollision)
+			CatAngle.WEST: 
+				$Hit_Box/WestCollision.disabled = false
+				play_melee_animation($Hit_Box/WestCollision)
+			CatAngle.SOUTHWEST: 
+				$Hit_Box/SouthWestCollision.disabled = false
+				play_melee_animation($Hit_Box/SouthWestCollision)
+			CatAngle.NORTHWEST: 
+				$Hit_Box/NorthWestCollision.disabled = false
+				play_melee_animation($Hit_Box/NorthWestCollision)
+			CatAngle.SOUTHEAST: 
+				$Hit_Box/SouthEastCollision.disabled = false
+				play_melee_animation($Hit_Box/SouthEastCollision)
+			CatAngle.EAST: 
+				$Hit_Box/EastCollision.disabled = false
+				play_melee_animation($Hit_Box/EastCollision)
 		melee_timer.start()
 		is_attacking = true
 #func on_Hurt_Box_entered(area):

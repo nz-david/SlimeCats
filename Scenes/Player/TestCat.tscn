@@ -1,10 +1,11 @@
-[gd_scene load_steps=116 format=3 uid="uid://7wb18i6hgf"]
+[gd_scene load_steps=126 format=3 uid="uid://7wb18i6hgf"]
 
 [ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
 [ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
 [ext_resource type="Texture2D" uid="uid://feqws30pn7gm" path="res://Assets/Images/catapult back sprite sheet.png" id="3_68ji2"]
 [ext_resource type="Script" path="res://Scenes/Player/hit_box.gd" id="3_ch37d"]
 [ext_resource type="Shader" path="res://Scenes/Player/color_remap.gdshader" id="3_uw53i"]
+[ext_resource type="Texture2D" uid="uid://btyahdnfalfk7" path="res://Assets/Images/burst.png" id="4_0nxml"]
 [ext_resource type="Texture2D" uid="uid://bkfptuq2j68y4" path="res://Assets/Images/Final Sprite Sheets/34back.png" id="4_iedx8"]
 [ext_resource type="Texture2D" uid="uid://bs23f4087n68m" path="res://Scenes/Player/red.tres" id="4_t2gqu"]
 [ext_resource type="Texture2D" uid="uid://bnyfmfnpxuluk" path="res://Scenes/Player/bluu.tres" id="5_m82su"]
@@ -35,6 +36,70 @@ height = 1.56098
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3jc6m"]
 radius = 24.0
 height = 84.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kniwy"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjajy"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqole"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq482"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qs75"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf1eu"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd67l"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05otc"]
+atlas = ExtResource("4_0nxml")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_webku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kniwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjajy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqole")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lq482")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qs75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf1eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd67l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05otc")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rn2ge"]
 shader = ExtResource("3_uw53i")
@@ -843,6 +908,13 @@ rotation = 0.624828
 scale = Vector2(1.63, 1.63)
 shape = SubResource("CapsuleShape2D_3jc6m")
 disabled = true
+
+[node name="BurstAnimation" type="AnimatedSprite2D" parent="Hit_Box"]
+visible = false
+position = Vector2(1, -81)
+rotation = 1.5708
+scale = Vector2(1.63, 1.63)
+sprite_frames = SubResource("SpriteFrames_webku")
 
 [node name="Melee_Timer" type="Timer" parent="."]
 wait_time = 0.75
