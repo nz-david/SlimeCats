@@ -862,7 +862,7 @@ animation = &"side view idle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_4giht")
-volume_db = 7.579
+volume_db = 3.579
 
 [connection signal="area_entered" from="Hurt_Box" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="Hit_Box" to="Hit_Box" method="_on_area_entered"]
