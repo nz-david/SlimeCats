@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://beaktovnt3ont"]
+[gd_scene load_steps=39 format=3 uid="uid://beaktovnt3ont"]
 
 [ext_resource type="Script" path="res://den_scene.gd" id="1_sav0s"]
 [ext_resource type="PackedScene" uid="uid://7wb18i6hgf" path="res://Scenes/Player/TestCat.tscn" id="2_s33nd"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="9_qy76s"]
 [ext_resource type="Texture2D" uid="uid://c5pliqvlad8r6" path="res://Assets/Images/den.PNG" id="14_bcfjy"]
 [ext_resource type="Texture2D" uid="uid://bsj18hq2juh5" path="res://Assets/Images/moss.PNG" id="15_lqu01"]
+[ext_resource type="PackedScene" uid="uid://b88ajlewoyj1g" path="res://pause_menu.tscn" id="16_c8vxb"]
 [ext_resource type="Texture2D" uid="uid://dbpklu5l7odt7" path="res://Assets/Images/pool.PNG" id="16_qa81t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_itd8l"]
@@ -320,6 +321,10 @@ z_index = -1
 position = Vector2(90, -843)
 scale = Vector2(6.5, 6.5)
 texture = ExtResource("14_bcfjy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("16_c8vxb")]
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

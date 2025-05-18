@@ -7,7 +7,7 @@ var just_toggled = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
-	visible = false
+	#visible = false
 	get_tree().paused = false
 	$AnimationPlayer.play("RESET")
 
@@ -36,11 +36,11 @@ func resume():
 	# Wait for animation to finish before hiding and unpausing
 	await $AnimationPlayer.animation_finished
 	
-	visible = false
+	#visible = false
 	
 func pause():
 	# Show menu before pausing
-	visible = true
+	#visible = true
 	get_tree().paused = true
 	$AnimationPlayer.play("blur")
 	# Set focus to the first button
@@ -58,4 +58,4 @@ func _on_restart_pressed() -> void:
 
 
 func _on_quit_pressed() -> void:
-	pass
+	get_tree().quit()
