@@ -19,6 +19,7 @@ config/icon="res://Assets/Images/icon.svg"
 
 can_attack="*res://can_attack.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://Global.gd"
 
 [dialogic]
 
