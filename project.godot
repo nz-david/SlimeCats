@@ -252,6 +252,10 @@ den="Da Den"
 Player_Melee="Player's melee attack"
 boundry=""
 
+[gui]
+
+theme/custom="uid://0vxfjkdb80tv"
+
 [input]
 
 ui_left={

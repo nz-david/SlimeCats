@@ -8,7 +8,7 @@ var sps3 := 5
 var st3 := 0.0
 var sps4 := 12
 var st4 := 0.0
-var capacity = 10.0
+var capacity = 10
 var avail = true
 var slimespillammount = 0
 

@@ -167,7 +167,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpijx"]
-size = Vector2(19.7674, 20.3972)
+size = Vector2(22.093, 21.2617)
 
 [node name="DenScene" type="Node2D"]
 script = ExtResource("1_sav0s")
@@ -204,7 +204,7 @@ animation = &"bond1"
 frame_progress = 0.811849
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character_Ember/Interaction_Area"]
-position = Vector2(-0.11628, 0.198598)
+position = Vector2(-0.232559, 1.98598)
 shape = SubResource("RectangleShape2D_wpijx")
 
 [node name="Button2" type="Button" parent="."]

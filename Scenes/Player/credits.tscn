@@ -1147,7 +1147,7 @@ autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_dhcfh")
+&"": SubResource("AnimationLibrary_dhcfh")
 }
 
 [node name="Program_Happy" type="AnimatedSprite2D" parent="."]
