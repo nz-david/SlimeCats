@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdlgib3phy7td"]
 
-[ext_resource type="Script" path="res://Scenes/Player/catapult.gd" id="1_ujpnu"]
+[ext_resource type="Script" uid="uid://40bkayxb8k6u" path="res://Scenes/Player/catapult.gd" id="1_ujpnu"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_vq3wf"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cp4byxfqiwdnw"]
 
-[ext_resource type="Script" path="res://gameover.gd" id="1_j3t8f"]
+[ext_resource type="Script" uid="uid://bp38ei3r02dln" path="res://gameover.gd" id="1_j3t8f"]
 [ext_resource type="Texture2D" uid="uid://ghfo472b36gu" path="res://Assets/Images/Sad_Slime_Cats_Base.png" id="1_vev4d"]
 
 [node name="gameover" type="CanvasLayer"]

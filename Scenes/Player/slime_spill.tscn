@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dn7keeso7m68l"]
 
-[ext_resource type="Script" path="res://Scenes/Player/slime_spill.gd" id="1_w14xr"]
+[ext_resource type="Script" uid="uid://bckyoxi4rde7s" path="res://Scenes/Player/slime_spill.gd" id="1_w14xr"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_uyqdv"]
 

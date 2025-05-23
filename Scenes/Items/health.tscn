@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnpllfhf8tqtw"]
 
-[ext_resource type="Script" path="res://Scenes/Items/health.gd" id="1_gi80t"]
+[ext_resource type="Script" uid="uid://j00jxkc6xuqo" path="res://Scenes/Items/health.gd" id="1_gi80t"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_co5uf"]
 

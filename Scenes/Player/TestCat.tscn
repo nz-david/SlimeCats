@@ -1,10 +1,10 @@
 [gd_scene load_steps=126 format=3 uid="uid://7wb18i6hgf"]
 
-[ext_resource type="Script" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
-[ext_resource type="Script" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
+[ext_resource type="Script" uid="uid://ud0xa2rk77e4" path="res://Scenes/Player/TestCat.gd" id="1_ocf2j"]
+[ext_resource type="Script" uid="uid://cqgm1scdul3f1" path="res://Scenes/Player/aimer.gd" id="2_fjywb"]
 [ext_resource type="Texture2D" uid="uid://feqws30pn7gm" path="res://Assets/Images/catapult back sprite sheet.png" id="3_68ji2"]
-[ext_resource type="Script" path="res://Scenes/Player/hit_box.gd" id="3_ch37d"]
-[ext_resource type="Shader" path="res://Scenes/Player/color_remap.gdshader" id="3_uw53i"]
+[ext_resource type="Script" uid="uid://def5oda22xf42" path="res://Scenes/Player/hit_box.gd" id="3_ch37d"]
+[ext_resource type="Shader" uid="uid://deabvy6uf4e5q" path="res://Scenes/Player/color_remap.gdshader" id="3_uw53i"]
 [ext_resource type="Texture2D" uid="uid://btyahdnfalfk7" path="res://Assets/Images/burst.png" id="4_0nxml"]
 [ext_resource type="Texture2D" uid="uid://bkfptuq2j68y4" path="res://Assets/Images/Final Sprite Sheets/34back.png" id="4_iedx8"]
 [ext_resource type="Texture2D" uid="uid://bs23f4087n68m" path="res://Scenes/Player/red.tres" id="4_t2gqu"]
@@ -103,7 +103,6 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rn2ge"]
 shader = ExtResource("3_uw53i")
-shader_parameter/lerper = 0.0
 shader_parameter/pal0 = ExtResource("4_t2gqu")
 shader_parameter/pal1 = ExtResource("5_m82su")
 shader_parameter/pal2 = ExtResource("6_jn30p")
@@ -111,6 +110,7 @@ shader_parameter/pal3 = ExtResource("7_0msfw")
 shader_parameter/pal4 = ExtResource("8_8e7g3")
 shader_parameter/pal5 = ExtResource("9_vfj7c")
 shader_parameter/pal6 = ExtResource("10_ruxmu")
+shader_parameter/lerper = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qhws"]
 atlas = ExtResource("3_68ji2")

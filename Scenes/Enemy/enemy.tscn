@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpqwuwlce0ikj"]
 
-[ext_resource type="Script" path="res://Scenes/Enemy/enemy.gd" id="1_jq74k"]
+[ext_resource type="Script" uid="uid://c18m2l2am3dtr" path="res://Scenes/Enemy/enemy.gd" id="1_jq74k"]
 [ext_resource type="Texture2D" uid="uid://txksx5xcisla" path="res://Assets/Images/icon.svg" id="2_41abq"]
 [ext_resource type="PackedScene" uid="uid://cnpllfhf8tqtw" path="res://Scenes/Items/health.tscn" id="2_ts6tu"]
 [ext_resource type="Texture2D" uid="uid://bo22b3v8k384y" path="res://New Piskel.png" id="4_4rdwm"]
